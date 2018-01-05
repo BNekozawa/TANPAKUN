@@ -1,0 +1,80 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) 2000-2015 LOCKON CO.,LTD. All Rights Reserved.
+
+http://www.lockon.co.jp/
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#}
+<!-- ▼shiro8_faq▼ -->
+{% block javascript %}
+<script type="text/javascript" src="{{ app.config.plugin_urlpath }}/Shiro8Faq3/js/jquery.faq.js"></script>
+<script type="text/javascript">
+	var css=document.createElement("link");
+	css.setAttribute("rel","stylesheet");
+	css.setAttribute("type","text/css");
+	//css.setAttribute("href","{{ app.config.plugin_urlpath }}/Shiro8Faq3/css/faq.css");
+	css.setAttribute("href","{{ app.config.front_urlpath }}/css/faq.css");
+	document.getElementsByTagName("head")[0].appendChild(css);
+
+$(function(){
+var source = $('.faq');
+var target = $('#faq-container');
+target.append(source);
+})
+</script>
+{% endblock %}
+
+<div style="display:none;">
+<div class="faq">
+	<h3 class="tit_faq heading01">よくある質問</h3>
+		<p class="mes">ご質問の多い項目を表記いたしました。質問事項をクリックしてください。</p>
+
+
+<div class="tabContainer">
+{% if FaqGroups|length > 0 %}
+	<ul class="tabMenu">
+		{% for FaqGroup in FaqGroups %}
+			<li id="qa{{ FaqGroup.id }}"><a href="#qa{{ FaqGroup.id }}_area" title="{{ FaqGroup.faq_group_id }}">{{ FaqGroup.faq_group_name }}</a></li>
+		{% endfor %}
+	</ul>
+	
+
+
+
+{% endif %}
+<div class="qa_wrap">
+{% if FaqGroups|length > 0 %}
+
+	{% for FaqGroup in FaqGroups %}
+	<!--▼QA -->
+	<dl id="qa{{ FaqGroup.id }}_area">
+		{% for Faq in FaqGroup.Shiro8Faqs %}
+			<dt>{{ Faq.question }}</dt>
+				<dd>
+					<p>{{ Faq.answer|raw|nl2br}}</p>
+				</dd>
+		{% endfor %}
+	</dl><!--▲QA -->
+	{% endfor %}
+{% endif %}
+</div><!-- / qa_wrap -->
+<!-- / .tabContainer --></div>
+
+
+</div><!-- / faq -->
+</div><!-- /container for hide -->
+<!-- ▲shiro8_faq▲ -->

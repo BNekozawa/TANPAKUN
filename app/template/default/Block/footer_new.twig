@@ -1,0 +1,92 @@
+<div id="footer-container">
+    <section class="desktop_view">
+        <div id="footer-flex-container" clsss="desktop_view">
+            <section class="vertical-section" id="upper">
+            <h2 id="name-tanpakun">
+            TANPAKUN
+            </h2>
+            </section>
+            <section class="vertical-section" id="bottom">
+                <div class="footer-flex-column">
+                    <div>
+                        <a id="fb" href="#">
+                            <img src="{{ app.config.front_urlpath }}/img/footer/fb.png" alt="face book icon">
+                        </a>
+                        <a id="insta" href="#">
+                            <img src="{{ app.config.front_urlpath }}/img/footer/insta.png" alt="instagram icon">
+                            {# <img class="on" src="{{ app.config.front_urlpath }}/img/footer/insta_on.png" alt="instagram icon"> #}
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-flex-column">
+                    <ul class="row-container">
+                        {# <li class="row"><div class="header-name"><p>個人情報の取り扱い</p></div></li> #}
+                        <li class="row"><div><a href="/help/agreement"><p>利用規約</p></a></div></li>
+                        <li class="row"><div><a href="{{ url('help_tradelaw') }}"><p>特定商取引法に基づく表記について</p></a></div></li>
+                        <li class="row"><div><a href="{{ url('help_about') }}"><p>当サイトについて</p></a></div></li>            
+                        <li class="row"><div><a href="{{ url('help_privacy') }}"><p>プライバシーポリシー</p></a></div></li>            
+                    </ul>
+                </div>
+                <div class="footer-flex-column">
+                    <ul class="row-container">
+                        {# <li class="row"><div class="header-name"><p>HELP</p></div></li> #}
+                        <li class="row"><a href="{{ url('contact') }}"><div><p>お問い合わせ</p></div></a></li>
+                        <li class="row"><a href="/user_data/faq"><div><p>FAQ</p></div></a></li>            
+                    </ul>
+                </div>
+                <div class="footer-flex-column">
+                    <div class="header-name"><p>カスタマーサポートセンター<p></div>
+                    <div id="tel"><h2>06-6567-8790</h2></div>
+                    <div>受付時間 10：00～18：00</div>
+                    <div>土・日・祝日を除く</div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="mobile_view m_footer">
+        <h2>TANPAKUN</h2>
+        <div>
+            <ul class="mobile-cc">
+                {# <li>
+                     <a href="">個人情報の取り扱い</a>
+                </li> #}
+                <li>
+                    <a href="/help/agreement">利用規約</a>
+                </li>
+                <li>
+                    <a href="{{ url('help_tradelaw') }}">特定商取引法に基づく表記について</a>
+                </li>
+                <li>
+                    <a href="{{ url('help_about') }}">当サイトについて</a>
+                </li>
+                <li>
+                    <a href="{{ url('help_privacy') }}">プライバシーポリシー</a>
+                </li>
+                <li>
+                    <a href="{{ url('contact') }}">お問い合わせ</a>
+                </li>
+                <li>
+                    <a href="/user_data/faq">FAQ</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="mobile-cc">
+                <li>
+                    <a href="tel:06-6567-8790">カスタマーサポートセンター : <span class="bold">06-6567-8790</span></a>
+                </li>
+                <li>
+                    <span>受付時間 10：00～18：00</span>
+                </li>
+                <li>
+                    <span>土・日・祝日を除く</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="copyright-container">
+        <div id="copyright"><p>copyright (c) Tanpakun all rights reserved.</p></div>
+    {# <div id="arrow-control">^</div> #}
+    </section>
+    
+</div>

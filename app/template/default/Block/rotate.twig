@@ -1,0 +1,321 @@
+<!-- desktop~tablet -->
+<div id="product_slide" class="desktop_view">
+    <div id="tab_slide_wrap">
+        <div class="tab_slide">
+            <div class="goods_tab_wrap">
+                <div class="goods_tab">
+                    <input id="tab-one" type="radio" name="tabs" checked>
+                    <label class="sausage color" for="tab-one">
+                        <h1>ソーセージ</h1>
+                    </label>
+                    <div class="tab-content">
+                        <p class="desc">
+                            ドイツのマイスター資格を持つ名工から <br>
+                            技術とノウハウを受け継いだ日本工場で製造した<br> 
+                            国産鶏100%のプレミアムソーセージです！
+                        </p>
+                        <span style="display:inline-block; margin:10px 0; font-weight: bold">フレーバー</span>
+                        <div class="type">
+                            <span class="taste">
+                                <img src="{{ app.config.front_urlpath }}/img/main/taste_plane.png" alt="plane">
+                                <span>プレーン</span>
+                            </span>
+                            <span class="taste">
+                                <img src="{{ app.config.front_urlpath }}/img/main/taste_smoked.png" alt="smoked">
+                                <span>スモーク(燻製)</span>
+                            </span>
+                        </div>
+                        <a href="{{ url('product_list') }}?category_id=1" class="buy so">購入</a>
+                    </div>
+                </div>
+                <div class="goods_tab">
+                    <input id="tab-two" type="radio" name="tabs">
+                    <label class="hamburger" for="tab-two">
+                        <h1>ハンバーグ</h1>
+                    </label>
+                    <div class="tab-content">
+                        <p class="desc">
+                            安全、品質、新鮮へのこだわり！<br> 
+                            徹底した品質管理を追求しております<br> 
+                            国産鶏むね肉100％を使用したプレミアムハンバーグです
+                        </p>
+                        <span style="display:inline-block; margin:10px 0; font-weight: bold">フレーバー</span>
+                        <div class="type">
+                            <span class="taste">
+                                <img src="{{ app.config.front_urlpath }}/img/main/taste_origin.png" alt="plane">
+                                <span>プレーン</span>
+                            </span>
+                        </div>
+                        <a href="javascript:alert('準備中')" class="buy ham">1月29日発売</a>
+                    </div>
+                </div>
+            </div>
+            <div class="goods_slide">
+                <img class="slide slide1 active" src="{{ app.config.front_urlpath }}/img/main/line_so.png" alt="tanpakun sausage">
+                <img class="slide slide2" src="{{ app.config.front_urlpath }}/img/main/line_ham.png" alt="tanpakun sausage">
+            </div>
+        </div>
+    </div>
+    <div id="tab_info_wrap">
+        <nav class="nav nav_tabs">
+            <div class="nav_tab">
+                <a href="#none" class="nav_item nav_item1 active">ソーセージ</a>
+                <a href="#none" class="nav_item nav_item2">ハンバーグ</a>
+            </div>
+        </nav>
+        <div class="info info_tabs">
+            <div id="tab1" class="tab active">
+                <div class="tab-content tab-content1">
+                    <h3>国産鶏肉</h3>
+                    <p>100
+                        <span>%</span>
+                    </p>
+                    <p>
+                        信頼できる養鶏場で育った
+                        <br/> 国産鶏むね肉を100%使用
+                    </p>
+                </div>
+                <div class="tab-content tab-content2">
+                    <h3>炭水化物</h3>
+                    <p>0.1
+                        <span>g</span>
+                    </p>
+                    <p>
+                        程淡水貨物、程塩分(0.5g)で
+                        <br> ボディーメイクに最適
+                    </p>
+                </div>
+                <div class="tab-content tab-content3">
+                    <h3>タンパク質</h3>
+                    <p>17.7
+                        <span>g</span>
+                    </p>
+                    <p>カロリー(127Kcal)に対して、</br>
+                        高タンパクなので満腹感が長続き
+
+                    </p>
+                </div>
+            </div>
+            <div id="tab2" class="tab">
+                <div class="tab-content tab-content1">
+                    <h3>国産鶏肉</h3>
+                    <p>100
+                        <span>%</span>
+                    </p>
+                    <p>
+                        信頼できる農場で育った
+                        <br> 100％国産鶏むね肉だけ使用
+                    </p>
+                </div>
+                <div class="tab-content tab-content2">
+                    <h3>炭水化物</h3>
+                    <p>1.7
+                        <span>g</span>
+                    </p>
+                    <p>
+                        低炭水化物、低塩分(0.14g)
+                        <br> でボディメイクに最適
+                    </p>
+                </div>
+                <div class="tab-content tab-content3">
+                    <h3>タンパク質</h3>
+                    <p>16.4
+                        <span>g</span>
+                    </p>
+                    <p>
+                        カロリ〡に対して(141.6Kcal)
+                        <br> 高たんぱくなので満腹感が長続きします
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- mobile -->
+<div id="m_product_slider" class="mobile_view">
+    <div class="wrap_product_lineup">
+        <div id="lineup">
+            <ul class="lineup_slider">
+                <li class="item item1">
+                    <div class="wrap_img">
+                        <img src="{{ app.config.front_urlpath }}/img/main/line_so.png" alt="tanpakun sausage">
+                    </div>
+                    <div class="wrap_text">
+                        <span class="product_name">
+                            ソーセージ
+                        </span>
+                        <span class="desc">
+                            ドイツのマイスター資格を持つ名工から
+                            <br/> 技術とノウハウを受け継いだ日本工場で製造した国産鶏
+                            <br/> 100%のプレミアムソーセージです！
+                        </span>
+                        <ul class="type">
+                            <li class="taste">
+                                <img src="{{ app.config.front_urlpath }}/img/main/taste_plane.png" alt="plane"> プレーン
+                            </li>
+                            <li class="taste">
+                                <img src="{{ app.config.front_urlpath }}/img/main/taste_smoked.png" alt="smoked"> スモーク(燻製)
+                            </li>
+                        </ul>
+                        <a class="link_shop" href="{{ url('product_list') }}?category_id=1">購入</a>
+                    </div>
+                </li>
+                <li class="item item2">
+                    <div class="wrap_img">
+                        <img src="{{ app.config.front_urlpath }}/img/main/line_ham.png" alt="tanpakun sausage">
+                    </div>
+                    <div class="wrap_text">
+                        <span class="product_name">
+                            ハンバーグ
+                        </span>
+                        <span class="desc">
+                            安全、品質、新鮮へのこだわり！<br> 
+                            徹底した品質管理を追求しております<br> 
+                            国産鶏むね肉100％を使用したプレミアムハンバーグです
+                        </span>
+                        <ul class="type">
+                            <li class="taste">
+                                <img src="{{ app.config.front_urlpath }}/img/main/taste_origin.png" alt="plane"> プレーン
+                            </li>
+                            <!-- <li class="taste">
+                                スモーク(燻製)
+                            </li> -->
+                        </ul>
+                        <a class="link_shop" href="javascript:alert('準備中')">1月29日発売</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="info_slider">
+            <div class="tab_btns">
+                <a class="tab_btn btn_info1 is_active" href="#none">ソーセージ</a>
+                <a class="tab_btn btn_info2" href="#none">ハンバーグ</a>
+            </div>
+            <div class="wrap_info">
+                <ul id="slider-container">
+                    <li class="slider-child">
+                        <div class="box_info content1 is_active">
+                            <ul id="info_slider_sausage">
+                                <li class="content">
+                                    <h3>国産鶏肉</h3>
+                                    <p>100
+                                        <span>%</span>
+                                    </p>
+                                    <p>
+                                        信頼できる養鶏場で育った
+                                        <br/> 国産鶏むね肉を100%使用
+                                    </p>
+                                </li>
+                                <li class="content">
+                                    <h3>炭水化物</h3>
+                                    <p>0.1
+                                        <span>g</span>
+                                    </p>
+                                    <p>
+                                        程淡水貨物、程塩分(0.5g)で
+                                        <br> ボディーメイクに最適
+                                    </p>
+                                </li>
+                                <li class="content">
+                                    <h3>タンパク質</h3>
+                                    <p>17.7
+                                        <span>g</span>
+                                    </p>
+                                    <p>カロリー(127Kcal)に対して、</br>
+                                        高タンパクなので満腹感が長続き
+
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="slider-child">
+                        <div class="box_info content2">
+                            <ul id="info_slider_hamburger">
+                                <li class="content">
+                                    <h3>国産鶏肉</h3>
+                                    <p>100
+                                        <span>%</span>
+                                    </p>
+                                    <p>
+                                         信頼できる農場で育った<br> 
+                                         100％国産鶏むね肉だけ使用
+                                    </p>
+                                </li>
+                                <li class="content">
+                                    <h3>炭水化物</h3>
+                                    <p>1.7
+                                        <span>g</span>
+                                    </p>
+                                    <p>
+                                         低炭水化物、低塩分(0.14g)<br> 
+                                         でボディメイクに最適
+                                    </p>
+                                </li>
+                                <li class="content">
+                                    <h3>タンパク質</h3>
+                                    <p>16.4
+                                        <span>g</span>
+                                    </p>
+                                    <p>
+                                         カロリ〡に対して(141.6Kcal)<br>
+                                          高たんぱくなので満腹感が長続きします
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        /*
+        TAB control
+        */
+        $('.goods_tab label').each(function () {
+            var $this = $(this);
+            $this.on('click', function () {
+                $('.slide').removeClass('active');
+                $('.goods_tab label').removeClass('color');
+                $(this).addClass('color');
+                if ($this.hasClass('sausage')) {
+                    $('.slide1').addClass('active');
+                } else if ($this.hasClass('hamburger')) {
+                    $('.slide2').addClass('active');
+                }
+            });
+        });
+
+        $('.nav_item').each(function () {
+            var $this = $(this);
+            $this.on('click', function () {
+                $(".nav_item").removeClass('active');
+                $this.addClass('active');
+                $('.tab').removeClass('active');
+                if ($this.hasClass('nav_item1')) {
+                    $('#tab1').addClass('active');
+                } else if ($this.hasClass('nav_item2')) {
+                    $('#tab2').addClass('active');
+                }
+            });
+        });
+
+        var isVisible = false;
+
+        function scroll() {
+            var height = $(window).scrollTop();
+            if (height >= 3300) {
+                $("#tab1").addClass('active');
+                isVisible = true;
+            }
+        }
+        $(window).on('scroll', function () {
+            if (isVisible == false) {
+                scroll();
+            }
+        });
+    });
+</script>

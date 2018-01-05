@@ -1,0 +1,90 @@
+<style>
+	.btn-social {
+		text-align: center !important;
+		font-weight: normal !important;
+	}
+	.btn-social > span:first-child {
+		border: none;
+		top: 20%;
+		left: 27%;
+		font-size: 1.2em;
+	}
+	.mypage_signin_box_sns .btn-block {
+		width: 30%;
+		margin: 0;
+	}
+	.mypage_signin_box_sns .btn-social > span:first-child {
+		left: 19%;
+	}
+	.mypage_signin_box_sns p {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	@media only screen and (max-width: 683px) {
+		.mypage_signin_box_sns .btn-block {
+			width: 100% !important;
+		}
+	}
+</style>
+{#
+/*
+ * Copyright(c) zhili he. All Rights Reserved.
+ * http://www.babalibo.com/ [fukiri@hotmail.com]
+ */
+#}
+<!-- ▼social lgoin block▼ -->
+<link href="{{assets}}bootstrap-social-gh-pages/assets/css/font-awesome.css" rel="stylesheet">
+<link href="{{assets}}bootstrap-social-gh-pages/bootstrap-social.css" rel="stylesheet">
+
+{# <div class="container-fluid">
+	<div id="login_box" class="row">
+		<div id="mypage_login_wrap" class="col-sm-8 col-sm-offset-2"> #}
+{#			<div id="mypage_login_box" class="column">  /*replaced with following div tag */ #}
+<div style="display:hidden">
+	<div id="mypage_login_box_sns">
+		<div id="mypage_login_box__body" class="column_inner clearfix">
+			<div id="mypage_login__login_button" class="btn-area">
+				<h3 class="page-heading login_title sns-page-heading">SNS ログイン</h3>
+					<p>
+						{% if login_paths.facebook is defined and false %}
+							<a href='{{ login_paths.facebook }}' class="btn btn-block btn-social btn-facebook"> <span class="fa fa-facebook"></span> <span class="btn-text">Log in with Facebook</span> </a>
+						{% endif %}
+
+						{% if login_paths.google is defined %}
+						<a href="{{ login_paths.google }}" class="btn btn-block btn-social btn-google"> <span class="fa fa-google"></span> <span class="btn-text">Log in with Google</span></a>
+						{% endif %}
+
+						{% if login_paths.twitter is defined %}
+						<a href="{{ login_paths.twitter }}" class="btn btn-block btn-social btn-twitter"> <span class="fa fa-twitter"></span> <span class="btn-text">Log in with Twitter</span> </a>
+						{% endif %}
+					<p>
+			</div>
+		</div>
+	</div>
+</div>
+	{#	</div><!-- /.col -->
+	</div><!-- /.row -->
+</div> #}
+
+
+<!-- ▲social lgoin block▲ -->
+
+{% block javascript %}
+<script>
+$(function(){
+		var source = $('#mypage_login_box_sns');
+		var target = $('#mypage_login_wrap');
+		target.append(source);
+		if($('#snsdata').length){
+			$('#mypage_login_box_sns').addClass('mypage_signin_box_sns');
+			$('.sns-page-heading').hide();
+			$('.btn-facebook .btn-text').text('Sign in with Facebook');
+			$('.btn-google .btn-text').text('Sign in with Google');
+			$('.btn-twitter .btn-text').text('Sign in with Twitter');
+		}
+})
+</script>
+
+
+
+{% endblock %}
