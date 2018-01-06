@@ -1,0 +1,139 @@
+ /* @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700); */
+
+ header {
+     height: 100%;
+     color: rgb(0, 0, 0);
+     -moz-box-shadow: 0 0 10 0 #ff7b00;
+     -webkit-box-shadow: 0 0 10px 0 #ff7b00;
+     box-shadow: 0 0 10px 0 #ff7b00;
+     display: -moz-box;
+     -moz-box-orient: vertical;
+     -moz-box-pack: center;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-box-pack: center;
+     display: -ms-flexbox;
+     -ms-flex-direction: column;
+     -ms-justify-content: center;
+     display: -webkit-flex;
+     -webkit-flex-direction: column;
+     -webkit-justify-content: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ h3 {
+     margin: 0 auto 2em;
+     font-size: 1.5em;
+     text-transform: uppercase;
+ }
+
+ h3:after {
+     content: "";
+     position: absolute;
+     left: 20%;
+     width: 60%;
+     height: 1px;
+     margin-top: 2em;
+     background-color: white;
+ }
+
+ nav {
+     top: 59%;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     background-color: #ee5e2d;
+     line-height: 1rem;
+ }
+
+ nav:not(.hide) a {
+     -moz-transition: all 0.2s;
+     -o-transition: all 0.2s;
+     -webkit-transition: all 0.2s;
+     transition: all 0.2s;
+ }
+
+ nav a {
+     font-size: 0.95rem;
+     display: inline-block;
+     cursor: pointer;
+     margin: 1rem 0.5em;
+     font-weight: 400;
+     text-transform: capitalize;
+     text-decoration: none;
+     color: rgb(0, 0, 0);
+     -moz-box-shadow: 0 1px 0 transparent;
+     -webkit-box-shadow: 0 1px 0 transparent;
+     box-shadow: 0 1px 0 transparent;
+ }
+
+ nav a:hover,
+ nav a.active {
+     color: #464646;
+ }
+
+ nav a:focus {
+     -moz-box-shadow: 0 1px 0 rgb(0, 0, 0);
+     -webkit-box-shadow: 0 1px 0 #979797;
+     box-shadow: 0 1px 0 #000000;
+     outline: 0;
+ }
+
+ .cloned {
+     position: fixed;
+     top: 0;
+     margin-top: 0;
+     z-index: 900;
+     width: 100%;
+     opacity: 0;
+     visibility: hidden;
+ }
+
+ .cloned a {
+     color: rgba(0, 0, 0, 0.85);
+     -moz-transition: all 0.2s;
+     -o-transition: all 0.2s;
+     -webkit-transition: all 0.2s;
+     transition: all 0.2s;
+ }
+
+ .cloned.stickToTop {
+     top: 0;
+ }
+
+ .cloned.hideFromUser {
+     margin-top: -3rem;
+ }
+
+ .bgw {
+     background-color: white;
+ }
+
+ .bgn {
+     background-color: rgba(255, 255, 255, 0);
+ }
+
+ .hide {
+     visibility: hidden;
+ }
+
+ .hide a {
+     color: transparent;
+ }
+
+ .original.hide+.cloned {
+     visibility: visible;
+     opacity: 1;
+     -moz-transition: all 0.3s;
+     -o-transition: all 0.3s;
+     -webkit-transition: all 0.3s;
+     transition: all 0.3s;
+ }
+
+ #confirm_box__company_name,
+ #confirm_box__fax,
+ #confirm_box__job {
+     display: none;
+ }
