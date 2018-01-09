@@ -42,7 +42,13 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     {{ PageLayout.meta_tags|raw }}
 {% endif %}
 {% block meta_tags %}{% endblock %}
-<link rel="icon" href="{{ app.config.front_urlpath }}/img/common/favicon.ico">
+<link rel="shortcut icon" href="{{ app.config.front_urlpath }}/img/common/favicon.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="{{ app.config.front_urlpath }}/img/common/icon57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="{{ app.config.front_urlpath }}/img/common/icon72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="{{ app.config.front_urlpath }}/img/common/icon76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="{{ app.config.front_urlpath }}/img/common/icon114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="{{ app.config.front_urlpath }}/img/common/icon120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="{{ app.config.front_urlpath }}/img/common/icon144.png" />
 <link rel="stylesheet" href="{{ app.config.front_urlpath }}/css/style.css?v={{ constant('Eccube\\Common\\Constant::VERSION') }}">
 <link rel="stylesheet" href="{{ app.config.front_urlpath }}/css/slick.css?v={{ constant('Eccube\\Common\\Constant::VERSION') }}">
 <link rel="stylesheet" href="{{ app.config.front_urlpath }}/css/default.css?v={{ constant('Eccube\\Common\\Constant::VERSION') }}">

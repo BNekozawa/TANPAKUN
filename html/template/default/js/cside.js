@@ -27,11 +27,12 @@ $(function () {
     // });
     // })
     //  *** before desktop view main banner ***//
+    
 
     // mobile sticky header
     $('#m-header-navigation .cloned').hide();
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 42) {
+        if ($(this).scrollTop() > 64) {
             // console.log("sticky");
             $('#m-header-navigation .cloned').slideDown();
         } else {
@@ -102,20 +103,26 @@ $(function () {
      $('#m_slider_container_xs .m_slider_xs').slick({
          slidesToShow: 1,
          slidesToScroll: 1,
-         arrows: false,
+         arrows: true,
          dots: true,
          adaptiveHeight: true,
          fade: true,
-         autoplay: true,
-         autoplaySpeed: 2000,
+        //  autoplay: true,
+        //  autoplaySpeed: 2000,
          
         //  autoplay: true,
         //  autoplaySpeed: 2000,
      });
 
     // main page ** add review list event
-    $('.add_list_btn').on('click', function () {
+    // desktop
+    $('.add_list_btn.desktopview').on('click', function () {
         $('#customer_review .wrap .review_lists .list').show(500);
+        $(this).hide(300);
+    });
+    // mobile
+    $('.add_list_btn.mobile_view').on('click', function () {
+        $('#customer_review .wrap .review_lists .list').eq(1).show(500);
         $(this).hide(300);
     });
 
@@ -169,6 +176,15 @@ $(function () {
     })
 
     // TOP button
+    $(window).scroll(function () {
+        scrollTop = $(window).scrollTop();
+        if (scrollTop > $(window).height()) {
+            $('#btn_page_top').addClass('on');
+        } else {
+            $('#btn_page_top').removeClass('on');
+        }
+    });
+    // when the on click Top button
     $('#btn_page_top').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 500);
         return false;

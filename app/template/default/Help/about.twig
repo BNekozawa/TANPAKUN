@@ -58,7 +58,7 @@ $(function() {
         <div class="container-fluid inner no-padding">
             <div id="main">
                 <h1 class="page-heading">当サイトについて</h1>
-                <div id="help_about" class="container-fluid">
+                <div id="help_about" class="container-fluid res_padding">
                     <div id="help_about_box" class="row">
                         <div id="help_about_box__body" class="col-md-10 col-md-offset-1">
                             <div id="help_about_box__body_innner" class="dl_table">
@@ -79,17 +79,10 @@ $(function() {
                                 {% if BaseInfo.zip01 is defined %}
                                 <dl id="help_about_box__zip">
                                     <dt>所在地</dt>
-                                    <dd>
-                                        〒{{ BaseInfo.zip01 }}-{{ BaseInfo.zip02 }}<br />
-                                        {{ BaseInfo.pref }}{{ BaseInfo.addr01 }}{{ BaseInfo.addr02 }}<br />
-
+                                    <dd>〒{{ BaseInfo.zip01 }}-{{ BaseInfo.zip02 }}<br />
+                                        {{ BaseInfo.pref }}{{ BaseInfo.addr01 }}{{ BaseInfo.addr02 }}
                                     </dd>
- </dl>
-
-<!-- <dl id="help_about_box__zip"> -->
-<!-- <dt> 営業所</dt> -->
-<!-- <dd>〒556-0011　<br/> 大阪市浪速区難波中3−16−11 ニュー難波ビル357号 <br/></dd> -->
-<!--                                </dl> -->
+                                </dl>
                                 {% endif %}
 
                                 {% if BaseInfo.tel01 is defined %}
@@ -99,7 +92,6 @@ $(function() {
                                     </dl>
                                 {% endif %}
 
-<!-- ifにfalse処理　アンテジュン -->
                                 {% if BaseInfo.fax01 is defined and false %}
                                     <dl id="help_about_box__fax">
                                         <dt>FAX番号</dt>

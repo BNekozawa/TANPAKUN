@@ -2557,10 +2557,10 @@ a.text-default:hover {
     color: #9797a1;
 }
 .text-primary {
-    color: #DE5D50;
+    color: #e32157;
 }
 a.text-primary:hover {
-    color: #e57d73;
+    color: #e32157;
 }
 .text-success {
     color: #18A689;
@@ -2692,8 +2692,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
     color: #fff;
-    background-color: #DE5D50;
-    border-color: #DE5D50;
+    background-color: #e32157;
+    border-color: #e32157;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2701,8 +2701,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #D85145;
-    border-color: #D85145;
+    background-color: #e32157;
+    border-color: #e32157;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3208,8 +3208,16 @@ fieldset[disabled] .btn-link:focus {
     .btn {
         padding: 14px 0px !important;
     }
-    #page_mypage_login #main #login_mypage #login_box #mypage_login_wrap #mypage_login_box #mypage_login_box__body .btn_area p button{
+    #page_mypage_login #main #login_mypage #login_box #mypage_login_wrap #mypage_login_box #mypage_login_box__body .btn_area p button,
+    #customer_box__login_button p button {
         line-height: 0 !important;
+    }
+    #guest_box__confirm_button a {
+        padding: 0 !important;
+    }
+    #page_cart #cart #cart_box__body .total_box .btn_group p {
+        float: none !important;
+        width: 100% !important;
     }
 }
 

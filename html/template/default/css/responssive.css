@@ -1,13 +1,6 @@
 /* fixed style css eccube in eccube solution*/
 @media only screen and (min-width: 768px) {
   .page-heading {
-    font-size: 32px;
-    font-size: 3.2rem;
-    border-bottom-style: solid;
-    border-top: 0 none;
-    padding: 16px 0 16px;
-    margin: 0 108px 48px; }
-  .page-heading {
     margin: 41px 103px 10px;
     font-size: 16px;
     font-size: 1.6rem;
@@ -15,9 +8,6 @@
     border-bottom: 1px dotted #ccc;
     border-top: 1px solid #ccc;
     padding: 8px; }
-  .col-sm-4 {
-    width: 177px;
-    margin: 42px 54px 0 150px; }
   .intro {
     margin: 0 550px;
     padding-top: 0.5em;
@@ -28,12 +18,24 @@
   margin: 0; }
 
 /* hide and show mobile to pc*/
-@media screen and (min-width: 981px) {
+@media screen and (min-width: 979px) {
   .mobile_view {
+    display: none; }
+  #customer_review .wrap .add_list_btn {
+    display: none; } }
+
+@media screen and (max-width: 1100px) {
+  .container-fluid.inner .container-fluid {
+    padding: 0 30px; }
+  #btn_page_top {
     display: none; } }
 
 @media screen and (max-width: 980px) {
+  .container-fluid.inner .container-fluid {
+    padding: 0 15px; }
   .desktop_view {
+    display: none; }
+  #btn_page_top {
     display: none; } }
 
 @media screen and (max-width: 980px) {
@@ -153,17 +155,19 @@
             display: none; }
           #side_menu .side_wrap .side_lists .list.search_bar #search .extra-form {
             margin: 0; }
-          #side_menu .side_wrap .side_lists .list.search_bar #search .input_search input[type="search"] {
-            padding: 0 0 0 70px; }
-          #side_menu .side_wrap .side_lists .list.search_bar #search .input_search .btn_search_close {
-            display: none; }
-          #side_menu .side_wrap .side_lists .list.search_bar #search .input_search .bt_search {
-            left: 0; }
-            #side_menu .side_wrap .side_lists .list.search_bar #search .input_search .bt_search .cb-search {
-              fill: #ababab; }
+          #side_menu .side_wrap .side_lists .list.search_bar #search .input_search {
+            border: 0; }
+            #side_menu .side_wrap .side_lists .list.search_bar #search .input_search input[type="search"] {
+              padding: 0 0 0 70px; }
+            #side_menu .side_wrap .side_lists .list.search_bar #search .input_search .btn_search_close {
+              display: none; }
+            #side_menu .side_wrap .side_lists .list.search_bar #search .input_search .bt_search {
+              left: 0; }
+              #side_menu .side_wrap .side_lists .list.search_bar #search .input_search .bt_search .cb-search {
+                fill: #ababab; }
       #side_menu .side_wrap .side_lists .list.mypage a {
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         padding: 12px 0 12px 20px;
         text-align: center;
         display: block;
@@ -175,7 +179,7 @@
           background-position: 14px 11px;
           background-size: 25px; }
         #side_menu .side_wrap .side_lists .list.mypage a:nth-child(2) {
-          border-left: 1px solid #000;
+          border-left: 1px solid rgba(0, 0, 0, 0.2);
           background-image: url(../../default/img/main/speech_bubble_icon.png);
           background-repeat: no-repeat;
           background-position: 5px 14px;
@@ -187,7 +191,7 @@
       #side_menu .side_wrap .side_lists .list.links .link_lists .link_list a {
         display: block;
         padding: 12px 0 12px 20px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         text-align: left;
         text-transform: uppercase;
         text-decoration: none;
@@ -255,8 +259,32 @@
     display: none; }
   .m_main_banner_xs {
     display: block; }
+    .m_main_banner_xs .slick-prev {
+      position: absolute;
+      top: 43%;
+      right: inherit;
+      bottom: inherit;
+      left: 20px;
+      border: 0;
+      text-indent: -99999px;
+      width: 50px;
+      height: 50px;
+      background: url(../../default/img/sub/arrow_left.png) no-repeat;
+      outline: none; }
+    .m_main_banner_xs .slick-next {
+      position: absolute;
+      top: 43%;
+      right: 0;
+      bottom: inherit;
+      left: inherit;
+      border: 0;
+      text-indent: -99999px;
+      width: 50px;
+      height: 50px;
+      background: url(../../default/img/sub/arrow_right.png) no-repeat;
+      outline: none; }
     .m_main_banner_xs .slick-dots {
-      top: 97%; } }
+      top: 93%; } }
 
 @media screen and (min-width: 641px) {
   .m_main_banner_xs {
@@ -286,7 +314,6 @@
   .m_main_banner #m_slider_container .slick-dots {
     top: 93%; } }
 
-/* main product slide*/
 @media screen and (max-width: 980px) {
   #m_product_slider .wrap_product_lineup #lineup .lineup_slider {
     position: relative; }
@@ -311,11 +338,13 @@
         padding-bottom: 19px; }
         #m_product_slider .wrap_product_lineup #lineup .lineup_slider .item .wrap_text .type .taste {
           float: left;
-          width: 50%;
+          width: 100%;
           text-align: left;
           font-size: 14px; }
           #m_product_slider .wrap_product_lineup #lineup .lineup_slider .item .wrap_text .type .taste img {
             display: inline-block; }
+          #m_product_slider .wrap_product_lineup #lineup .lineup_slider .item .wrap_text .type .taste:nth-child(2) {
+            margin-top: 10px; }
         #m_product_slider .wrap_product_lineup #lineup .lineup_slider .item .wrap_text .type::after {
           content: '';
           display: table;
@@ -396,14 +425,14 @@
     #m_product_slider .wrap_product_lineup #info_slider .wrap_info .box_info {
       visibility: hidden; }
       #m_product_slider .wrap_product_lineup #info_slider .wrap_info .box_info #info_slider_hamburger {
-        margin-top: -281px; }
+        margin-top: -260px; }
         #m_product_slider .wrap_product_lineup #info_slider .wrap_info .box_info #info_slider_hamburger .content h3 {
           text-align: center;
           font-size: 30px;
           margin: 0; }
         #m_product_slider .wrap_product_lineup #info_slider .wrap_info .box_info #info_slider_hamburger .content p:nth-child(2) {
           text-align: center;
-          font-size: 100px;
+          font-size: 85px;
           margin: 22px 0 27px; }
           #m_product_slider .wrap_product_lineup #info_slider .wrap_info .box_info #info_slider_hamburger .content p:nth-child(2) span {
             font-size: 25px;
@@ -419,7 +448,7 @@
         margin: 0; }
       #m_product_slider .wrap_product_lineup #info_slider .wrap_info .box_info #info_slider_sausage .content p:nth-child(2) {
         text-align: center;
-        font-size: 100px;
+        font-size: 85px;
         margin: 22px 0 27px; }
         #m_product_slider .wrap_product_lineup #info_slider .wrap_info .box_info #info_slider_sausage .content p:nth-child(2) span {
           font-size: 25px;
@@ -453,13 +482,16 @@
       #curtain-container .m_curtain_wrap .division_wrap .desc_wrap {
         height: 40%;
         padding: 20px 50px; }
-        #curtain-container .m_curtain_wrap .division_wrap .desc_wrap .sub_tit {
-          font-size: 13.5px;
+        #curtain-container .m_curtain_wrap .division_wrap .desc_wrap .sub_tit h3 {
+          font-size: 2.2rem;
           display: block;
           text-align: left;
           text-transform: capitalize;
           text-decoration: none;
-          font-weight: bold; }
+          font-weight: bold;
+          margin: 5px 0; }
+        #curtain-container .m_curtain_wrap .division_wrap .desc_wrap > img {
+          height: 10px; }
         #curtain-container .m_curtain_wrap .division_wrap .desc_wrap .heading_text {
           margin: 0;
           padding: 14px 0 32px;
@@ -472,15 +504,27 @@
 
 /* main review */
 @media screen and (max-width: 980px) {
-  #customer_review .wrap .mailing_btn {
-    margin-right: 15%; }
-  #customer_review .wrap .review_lists .list {
-    display: none; }
-    #customer_review .wrap .review_lists .list:nth-child(1) {
-      display: block;
-      float: none;
+  #customer_review .wrap {
+    padding: 120px 0 95px; }
+    #customer_review .wrap .mailing_btn {
+      top: 40px; }
+    #customer_review .wrap .review_lists .list {
+      display: none; }
+      #customer_review .wrap .review_lists .list:nth-child(1) {
+        display: block;
+        float: none;
+        width: 80%;
+        margin: 0 auto; }
+      #customer_review .wrap .review_lists .list:nth-child(2) {
+        float: none;
+        width: 80%;
+        margin: 30px auto 0; }
+    #customer_review .wrap .add_list_btn {
       width: 80%;
-      margin: 0 auto; } }
+      margin: 30px auto 0;
+      background: 64% 23.5px #fff url(../../default/img/main/plus_btnx2.png) no-repeat;
+      background-size: 14px;
+      color: #000; } }
 
 @media screen and (max-width: 980px) {
   #visitor #project_facts .project_facts_wrap {
@@ -548,66 +592,54 @@
   width: 100% !important;
   text-align: center; }
 
-@media screen and (max-width: 1280px) {
-  #about_company .about_wrap {
-    padding: 0 20px; }
-    #about_company .about_wrap .section.about #vision {
-      padding-top: 35px; }
-      #about_company .about_wrap .section.about #vision h2 {
-        font-size: 33.5px;
-        padding-bottom: 20px; }
-      #about_company .about_wrap .section.about #vision .part.text_box .list.red {
-        font-size: 26px; }
-      #about_company .about_wrap .section.about #vision .part.text_box .list.black {
-        font-size: 16px;
-        padding: 56px 0 0 32px; }
-    #about_company .about_wrap .section.about #mission {
-      padding: 100px 0 100px 0; }
-      #about_company .about_wrap .section.about #mission h2 {
-        font-size: 24px; }
-      #about_company .about_wrap .section.about #mission .mission_lists .list {
-        padding: 25px;
-        min-height: 180px; }
-        #about_company .about_wrap .section.about #mission .mission_lists .list h3 {
-          padding-bottom: 15px;
-          font-size: 18px; }
-        #about_company .about_wrap .section.about #mission .mission_lists .list p {
-          font-size: 13.5px; } }
+@media screen and (max-width: 980px) {
+  #about_company .m_banner img {
+    width: 100%; }
+  #about_company .wrap {
+    padding: 0; }
+    #about_company .wrap .section.about .img_mission {
+      display: none; }
+    #about_company .wrap .section.about .img_vision {
+      display: none; }
+    #about_company .wrap .section.about #vision {
+      padding-top: 30px; }
+      #about_company .wrap .section.about #vision h2 {
+        font-size: 30px;
+        padding: 0 30px 30px; }
+      #about_company .wrap .section.about #vision .part {
+        float: none;
+        width: 100%; }
+        #about_company .wrap .section.about #vision .part.img_box img {
+          position: relative;
+          left: 10%; }
+        #about_company .wrap .section.about #vision .part.text_box .list.red {
+          font-size: 24px;
+          top: -60px;
+          left: 0;
+          padding-left: 20px; }
+        #about_company .wrap .section.about #vision .part.text_box .list.black {
+          padding: 0 20px;
+          margin-top: -20px; }
+    #about_company .wrap .section.about #mission {
+      padding: 72.5px 30px; } }
+    @media screen and (max-width: 980px) and (max-width: 440px) {
+      #about_company .wrap .section.about #mission {
+        padding: 72.5px 15px; } }
 
 @media screen and (max-width: 980px) {
-  #about_company .about_wrap {
-    padding: 0; }
-    #about_company .about_wrap .section.about #vision h2 {
-      font-size: 30px; }
-    #about_company .about_wrap .section.about #vision .part {
-      float: none;
-      width: 100%; }
-      #about_company .about_wrap .section.about #vision .part.img_box img {
-        position: relative;
-        left: 10%; }
-      #about_company .about_wrap .section.about #vision .part.text_box .list.red {
-        font-size: 24px;
-        top: -60px;
-        left: 0;
-        padding-left: 20px; }
-      #about_company .about_wrap .section.about #vision .part.text_box .list.black {
-        padding: 0 20px;
-        margin-top: -20px; }
-    #about_company .about_wrap .section.about #mission {
-      padding: 72.5px 20px; }
-      #about_company .about_wrap .section.about #mission h2 {
+      #about_company .wrap .section.about #mission h2 {
         font-size: 20px; }
-      #about_company .about_wrap .section.about #mission .mission_lists.on_sliding {
+      #about_company .wrap .section.about #mission .mission_lists.on_sliding {
         position: relative; }
-        #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .list {
+        #about_company .wrap .section.about #mission .mission_lists.on_sliding .list {
           text-align: center;
           padding: 30px 40px 0; }
-          #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .list h3 {
+          #about_company .wrap .section.about #mission .mission_lists.on_sliding .list h3 {
             font-size: 22px; }
-          #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .list p {
+          #about_company .wrap .section.about #mission .mission_lists.on_sliding .list p {
             font-size: 18px;
             padding: 0 10px; }
-        #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .slick-prev {
+        #about_company .wrap .section.about #mission .mission_lists.on_sliding .slick-prev {
           text-indent: -9999px;
           width: 20px;
           height: 40px;
@@ -619,7 +651,7 @@
           transform: translate(0, -50%);
           background: url(../../default/img/sub/arrow_left.png) no-repeat;
           border: 0; }
-        #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .slick-next {
+        #about_company .wrap .section.about #mission .mission_lists.on_sliding .slick-next {
           text-indent: -9999px;
           width: 20px;
           height: 40px;
@@ -631,14 +663,14 @@
           transform: translate(0, -50%);
           background: url(../../default/img/sub/arrow_right.png) no-repeat;
           border: 0; }
-        #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .slick-dots {
+        #about_company .wrap .section.about #mission .mission_lists.on_sliding .slick-dots {
           width: 100%; }
-          #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .slick-dots li {
+          #about_company .wrap .section.about #mission .mission_lists.on_sliding .slick-dots li {
             width: 16.66667%;
             margin: 0; }
-            #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .slick-dots li button {
+            #about_company .wrap .section.about #mission .mission_lists.on_sliding .slick-dots li button {
               width: 100%; }
-              #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .slick-dots li button::before {
+              #about_company .wrap .section.about #mission .mission_lists.on_sliding .slick-dots li button::before {
                 width: 100%;
                 height: 6px;
                 background-color: #d1d1d1;
@@ -646,7 +678,7 @@
                 -moz-border-radius: 0;
                 -ms-border-radius: 0;
                 border-radius: 0; }
-            #about_company .about_wrap .section.about #mission .mission_lists.on_sliding .slick-dots li.slick-active button::before {
+            #about_company .wrap .section.about #mission .mission_lists.on_sliding .slick-dots li.slick-active button::before {
               background-color: #fd1851; } }
 
 @media screen and (max-width: 980px) {
@@ -668,3 +700,27 @@
     #page_cart #cart #cart_box__body .total_box .btn_group p {
       float: right;
       width: 49%; } }
+
+/* product detail*/
+@media screen and (max-width: 767px) {
+  #page_product_detail #item_detail #detail_wrap #item_photo_area #detail_image_box__slides .slick-dots {
+    max-width: 100%;
+    bottom: -40px;
+    text-align: center; }
+    #page_product_detail #item_detail #detail_wrap #item_photo_area #detail_image_box__slides .slick-dots li {
+      width: 20px; }
+      #page_product_detail #item_detail #detail_wrap #item_photo_area #detail_image_box__slides .slick-dots li button::before {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+  #page_product_detail #item_detail #detail_wrap #item_detail_area {
+    margin: 40px 0 0; } }
+
+/* register page*/
+@media screen and (max-width: 640px) {
+  #page_entry #register_form #top_box__footer #top_box__button_menu p {
+    max-width: 200px; } }
+  @media screen and (max-width: 640px) and (max-width: 470px) {
+    #page_entry #register_form #top_box__footer #top_box__button_menu p {
+      display: block;
+      max-width: 100%; } }
