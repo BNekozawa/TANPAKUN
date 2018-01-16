@@ -11,7 +11,9 @@
                 <div id="logo" class="section">
                     <div class="logo_wrap">
                         <h1 class="header_logo">
-                            <a href="{{ url('homepage') }}">{{ BaseInfo.shop_name }}</a>
+                            <a href="{{ url('homepage') }}">
+                                <img src="{{ app.config.front_urlpath }}/img/header/logo.png" alt="TANPAKUN">
+                            </a>
                         </h1>
                     </div>
                 </div>
@@ -64,7 +66,9 @@
     <nav class="cloned bgn bgw">
         <div class="cloned_nav">
             <div class="nav_part logo_wrap">
-                <a class="logo" href="{{ url('homepage') }}">{{ BaseInfo.shop_name }}</a>
+                <a class="logo" href="{{ url('homepage') }}">
+                    <img src="{{ app.config.front_urlpath }}/img/header/logo.png" alt="TANPAKUN">
+                </a>
             </div>
             <div class="nav_part link_wrap">
                 <a href="/user_data/about_company">ABOUT</a>
@@ -111,7 +115,9 @@
         </a>
         <div class="nav_list logo_wrap">
             <h1>
-                <a href="{{ url('homepage') }}">{{ BaseInfo.shop_name }}</a>
+                <a href="{{ url('homepage') }}">
+                    <img src="{{ app.config.front_urlpath }}/img/header/logo.png" alt="TANPAKUN">
+                </a>
             </h1>
         </div>
         <a class="nav_list m_cart_icon" href="{{ url('cart') }}">

@@ -29,7 +29,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
                         {{ form_widget(form.name, {'attr': { 'placeholder' : "キーワードを入力" }} ) }}
                         <button type="submit" class="bt_search"><svg class="cb cb-search"><use xlink:href="#cb-search" /></svg></button>
                         <a class="btn_search_close" href="#">
-                            <img src="../template/default/img/header/btn_search_close.png" alt="X">
+                            <img src="{{ app.config.front_urlpath }}/img/header/btn_search_close.png" alt="X">
                         </a>
                     </div>
                 </div>
