@@ -1,0 +1,265 @@
+/* product slide*/
+
+
+/* animation for slide*/
+
+@keyframes spin_in {
+    0% {
+        transform: matrix(0.4924, 0.08682, -0.08682, 0.4924, 100, 800);
+    }
+    50% {
+        transform: matrix(0.4924, -0.09, 0.09, 0.4924, 100, 800);
+    }
+    100% {}
+}
+
+
+/*animation for tab content*/
+
+@keyframes tab_in {
+    /* 0% {opacity:0;transform:translateX(-100%);} */
+    0% {
+        opacity: 0.5;
+        transform: translateX(-40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+#product_slide {
+    background: #eee;
+    #tab_slide_wrap,
+    #tab_info_wrap {
+        @include config_container(1100px);
+    }
+    #tab_slide_wrap {
+        min-height: 753px;
+        .tab_slide {
+            overflow: hidden;
+            padding: 0 20px;
+            .goods_tab_wrap {
+                width: 50%;
+                margin: 143px 0;
+                padding-left: 100px;
+                float: left;
+                .goods_tab {
+                    position: relative;
+                    input:checked~.tab-content {
+                        max-height: 300px;
+                    }
+                    .tab-content {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: all .35s;
+                        p {
+                            font-size: 15px;
+                            line-height: 1.7;
+                            font-weight: 400;
+                            color: #333;
+                        }
+                        a {
+                            width: 139px;
+                            height: 37px;
+                            margin-top: 30px;
+                            font-size: 13.5px;
+                            color: #fff;
+                            background-color: #000;
+                            border-radius: 40px;
+                            display: block;
+                            line-height: 38px;
+                            @include text(center, inherit, none);
+                            &:hover {
+                                background-color: #e32157;
+                            }
+                            &.ham {
+                                background-color: #a8a8a8;
+                                &:hover {
+                                    background-color: #a8a8a8;
+                                }
+                            }
+                        }
+                        .type {
+                            min-width: 270%;
+                            width: 100%;
+                            .taste {
+                                font-size: 14px;
+                                color: #000;
+                                img {
+                                    width: 35px;
+                                }
+                                span {
+                                    display: inline-block;
+                                    padding-left: 5px;
+                                }
+                                &:nth-child(2) {
+                                    padding-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                    input {
+                        display: none;
+                    }
+                    a {
+                        display: block;
+                    }
+                    label {
+                        display: block;
+                        padding: 10px 0;
+                        font-weight: 900;
+                        text-align: left;
+                        h1 {
+                            font-size: 55px;
+                            margin: 0 0;
+                        }
+                        color: #000;
+                        letter-spacing: -3.4px;
+                        &.color {
+                            color: #5fadc3;
+                        }
+                        &:hover {
+                            color: #5fadc3;
+                        }
+                    }
+                }
+            }
+        }
+        .goods_slide {
+            width: 50%;
+            height: 711px;
+            position: relative;
+            float: left;
+            img {
+                position: absolute;
+                top: 20%;
+                left: 12%;
+                transform: matrix(0.4924, 0.08682, -0.08682, 0.4924, 200, -800);
+                opacity: 1;
+                backface-visibility: hidden;
+                transition: all 0.8s;
+                &.active {
+                    transform: matrix(1, 0, 0, 1, 0, 0);
+                    animation: spin_in 0.8s linear;
+                    height: 80%;
+                }
+            }
+        }
+        &::after {
+            @include clear();
+        }
+    }
+    #tab_info_wrap {
+        .nav {
+            text-align: center;
+            .nav_tab {
+                position: relative;
+                width: 500px;
+                height: 70px;
+                margin: 0 auto;
+                /* border: 1px solid blue; */
+                .nav_item {
+                    display: inline-block;
+                    border: 1px solid #000;
+                    border-radius: 40px;
+                    width: 200px;
+                    height: 60px;
+                    line-height: 60px;
+                    color: #000;
+                    background-color: #eee;
+                    text-align: center;
+                    transition: all .2s ease-in-out;
+                    font-weight: 200;
+                    position: absolute;
+                    top: 0px;
+                    &:hover {
+                        background-color: #e0e0e0;
+                    }
+                    &.nav_item1 {
+                        left: 76px;
+                    }
+                    &.nav_item2 {
+                        right: 70px;
+                    }
+                    &.active {
+                        background-color: #000;
+                        color: #fff;
+                        z-index: 2;
+                        &:hover {
+                            background-color: #000;
+                        }
+                    }
+                }
+            }
+        }
+        .info {
+            position: relative;
+            height: 325px;
+            /* border: 1px solid red; */
+            margin-top: 50px;
+            .tab {
+                display: flex;
+                display: -webkit-flex;
+                width: 100%;
+                margin: 2rem auto;
+                text-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                &.active {
+                    opacity: 1;
+                }
+                .tab-content {
+                    flex: 1;
+                    -webkit-flex: 1;
+                    /* transform: translateX(-85%); */
+                    opacity: 0;
+                    h3 {
+                        margin: 0;
+                        font-weight: 200;
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+        .info h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .info .tab-content p:nth-child(2) {
+            font-size: 80px;
+            font-weight: 200;
+            margin: 0;
+        }
+        .info .tab-content p:nth-child(2) span {
+            display: inline-block;
+            font-size: 23px;
+            font-weight: 600;
+            margin-left: -12px;
+        }
+        .info .tab-content p:last-child {
+            font-size: 15px;
+            font-weight: 200;
+        }
+        .info .tab.active .tab-content {
+            transform: translateX(0);
+        }
+        .info .tab.active .tab-content1 {
+            animation: tab_in 0.5s linear forwards;
+        }
+        .info .tab.active .tab-content2 {
+            animation: tab_in 0.5s linear forwards;
+            animation-delay: .4s;
+        }
+        .info .tab.active .tab-content3 {
+            animation: tab_in 0.5s linear forwards;
+            animation-delay: .8s;
+        }
+    }
+}

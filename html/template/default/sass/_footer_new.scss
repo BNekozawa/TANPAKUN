@@ -1,0 +1,128 @@
+#page_cart {
+    #footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+#footer {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    #footer-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        color: #464646;
+        #footer-flex-container {
+            height: 100%;
+            width: 70%;
+            margin: 30px auto;
+            position: relative;
+            .vertical-section {
+                width: 100%;
+                position: relative;
+                &#upper {
+                    height: 20%;
+                    &::after {
+                        background: url(../../default/img/main/wave_line_blue.png) no-repeat;
+                        display: inline-block;
+                        content: '';
+                        width: 57px;
+                        height: 14px;
+                    }
+                }
+                &#bottom {
+                    display: -webkit-flex;
+                    display: flex;
+                    height: 80%;
+                    .footer-flex-column {
+                        -webkit-flex: 1;
+                        flex: 1;
+                        &:nth-child(3) {
+                            padding-left: 80px;
+                        }
+                        .row-container {
+                            position: relative;
+                            left: 0;
+                            top: 0;
+                            .row {
+                                display: block;
+                                text-align: left;
+                                margin: 0;
+                                padding: 0;
+                                a {
+                                    color: #000;
+                                }
+                            }
+                        }
+                        p {
+                            margin: 0;
+                            font-weight: normal;
+                            font-size: 1.3rem;
+                        }
+                        .header-name {
+                            p {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+            a {
+                display: inline-block; //   img {
+                //     visibility: hidden;
+                //   }
+                background-repeat: no-repeat;
+                &#fb {
+                    background-image: url("/template/default/img/footer/fb.png");
+                    &:hover {
+                        background-image: url("/template/default/img/footer/fb_on.png");
+                    }
+                }
+                &#insta {
+                    background-image: url("/template/default/img/footer/insta.png");
+                    &:hover {
+                        background-image: url("/template/default/img/footer/insta_on.png");
+                    }
+                }
+            }
+        }
+        #name-tanpakun {
+            margin: 5px 0;
+            font-weight: bolder;
+            letter-spacing: -1.9px;
+        }
+        #tel {
+            font-weight: bold;
+            h2 {
+                margin: 5px 0;
+                font-size: 3.4rem;
+            }
+        }
+        #copyright-container {
+            position: relative;
+            border-top: 1px solid rgb(195, 195, 195);
+            #copyright {
+                position: relative;
+                width: 70%;
+                margin: 18px auto;
+                p {
+                    text-align: left;
+                    font-size: 1.3rem;
+                    color: #686868;
+                }
+            }
+        }
+        #arrow-control {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 100%;
+            background: #b3b3b3;
+        }
+    }
+}

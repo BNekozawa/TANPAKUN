@@ -1,0 +1,51 @@
+/* main review */
+
+@media screen and (max-width: #{$mobile}) {
+    #customer_review {
+        background-position: 30px -20px;
+        background-size: 110%;
+        .wrap {
+            padding: 120px 0 95px;
+            .mailing_btn {
+                top: 40px;
+            }
+            .review_lists {
+                .list {
+                    width: 50.1%;
+                    margin: 0 auto;
+                    &:nth-child(1) { 
+                        float: none;
+                    }
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        display: none;
+                        float: none;
+                        margin: 30px auto 0;
+                    }
+                }
+            }
+            .add_list_btn {
+                width: 50%;
+                margin: 30px auto 0;
+                background: 64% 23.5px #fff url(../../default/img/main/plus_btnx2.png) no-repeat;
+                background-size: 14px;
+                color: #000;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: #{$mobile} - 340) {
+    #customer_review {
+        .wrap {
+            .review_lists {
+                .list {
+                    width: 90%;
+                }
+            }
+            .add_list_btn {
+                width: 90%;
+            }
+        }
+    }
+}

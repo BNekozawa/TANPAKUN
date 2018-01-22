@@ -1,0 +1,50 @@
+@media screen and (max-width: #{$mobile}) {
+    #footer {
+        #footer-container {
+            .bold {
+                font-weight: bold;
+            }
+            .m_footer {
+                padding: 0px 20px;
+            }
+            .mobile_view {
+                h2 {
+                    font-size: 1.9rem;
+                }
+                .row {
+                    padding: 0;
+                    margin-bottom: 0;
+                }
+                div:nth-child(3) {
+                    text-align: center;
+                    margin-bottom: 1em;
+                }
+                .mobile-cc:first-child {
+                    margin-bottom: 20px;
+                }
+                .mobile-cc>li {
+                    font-size: 13px;
+                    padding: 2px 0;
+                    text-align: left;
+                    display: block;
+                    margin: 0;
+                }
+                .mobile-cc>li a {
+                    color: #000;
+                    &:hover {
+                        color: #ff1959;
+                    }
+                }
+            }
+            #copyright-container {
+                #copyright {
+                    width: 100%;
+                    text-align: center;
+                    p {
+                      padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+/* header contents */
+
+#page_homepage {
+    #header {
+        #search_bar {
+            @include p-absolute(80px, 0, inherit, 0);
+        }
+    }
+}
+
+#header {
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    #search_bar {
+        @include p-absolute(0, 0, inherit, 0);
+        max-width: 1020px;
+        margin: 0 auto;
+        .drawer_block {
+            padding: 0;
+            #category_id {
+                display: none;
+            }
+            .input_search {
+                width: 25%;
+                float: right;
+                right: 40px;
+                border-bottom: 1px solid #000;
+                input::-webkit-input-placeholder {
+                    color: #000;
+                }
+                input:-moz-input-placeholder {
+                    color: #000;
+                }
+                input:-ms-input-placeholder {
+                    color: #000;
+                }
+                .bt_search {
+                    visibility: hidden;
+                }
+                .btn_search_close {
+                    position: absolute;
+                    top: 20px;
+                    right: -30px;
+                    img {
+                    height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* hide elem for use block codes */
+
+#search_bar {
+    display: none;
+}
+
+#cart_area {
+    display: none;
+}

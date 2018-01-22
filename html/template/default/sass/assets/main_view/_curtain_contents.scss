@@ -1,0 +1,55 @@
+/* curtain contents*/
+
+#curtain-container {
+    height: 100%;
+    .curtain_wrap {
+        margin: 0 auto;
+        height: 100%;
+        .division_wrap {
+            @include float-l(50%);
+            .img_wrap {
+                .parallax-window {
+                    min-height: 400px;
+                    height: 110vh;
+                    background: transparent;
+                }
+            }
+            .desc_wrap {
+                background: #fff;
+                height: 90vh;
+                padding: 3% 0 53px 15%;
+                text-align: left;
+                font-size: 1em;
+                line-height: 1.9em;
+                font-weight: normal;
+                .desc {
+                    p {
+                        color: initial;
+                        -moz-text-decoration-line: initial;
+                        -moz-text-decoration-style: initial;
+                        -moz-text-decoration-color: initial;
+                        text-decoration-line: initial;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                    }
+                }
+            }
+        }
+        &::after {
+            @include clear();
+        }
+        h3 {
+            font-size: 2.6em;
+            line-height: 1.14em;
+            &::after {
+                background-color: rgba( 0, 0, 0, 0); //to hide a glitch on curtain section
+            }
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+    #curtain-conatiner .place_holder {
+        background-size: 100%;
+    }
+}

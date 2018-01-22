@@ -1,0 +1,263 @@
+@media screen and (max-width: #{$mobile}) {
+    #about_company {
+        .m_banner {
+            img {
+                width: 100%;
+            }
+        }
+        .wrap {
+            padding: 0;
+            .section {
+                &.about {
+                    .img_mission {
+                        display: none;
+                    }
+                    .img_vision {
+                        display: none;
+                    }
+                    #vision {
+                        padding-top: 30px;
+                        h2 {
+                            font-size: 30px;
+                            padding: 0 30px 30px;
+                        }
+                        .part {
+                            float: none;
+                            width: 100%;
+                            &.img_box {
+                                img {
+                                    position: relative;
+                                    left: 10%;
+                                }
+                            }
+                            &.text_box {
+                                .list {
+                                    &.red {
+                                        font-size: 24px;
+                                        top: -60px;
+                                        left: 0;
+                                        padding-left: 20px;
+                                    }
+                                    &.black {
+                                        padding: 0 20px;
+                                        margin-top: -20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #mission {
+                        padding: 72.5px 30px;
+                        @media screen and (max-width: #{$mobile - 540}) {
+                            padding: 72.5px 15px;
+                        }
+                        h2 {
+                            font-size: 20px;
+                        }
+                        .mission_lists {
+                            &.on_sliding {
+                                .list {
+                                    text-align: center;
+                                    padding: 30px 40px 0;
+                                    h3 {
+                                        font-size: 22px;
+                                    }
+                                    p {
+                                        font-size: 18px;
+                                        padding: 0 10px;
+                                    }
+                                }
+                                position: relative;
+                                .slick-prev {
+                                    text-indent: -9999px;
+                                    width: 20px;
+                                    height: 40px;
+                                    @include p-absolute(50%, inherit, inherit, 0);
+                                    transform: translate(0, -50%);
+                                    background: url(../../default/img/sub/arrow_left.png) no-repeat;
+                                    border: 0;
+                                }
+                                .slick-next {
+                                    text-indent: -9999px;
+                                    width: 20px;
+                                    height: 40px;
+                                    @include p-absolute(50%, 0, inherit, inherit);
+                                    transform: translate(0, -50%);
+                                    background: url(../../default/img/sub/arrow_right.png) no-repeat;
+                                    border: 0;
+                                }
+                                .slick-dots {
+                                    width: 100%;
+                                    li {
+                                        width: 1 / 6 * 100%;
+                                        margin: 0;
+                                        button {
+                                            width: 100%;
+                                            &::before {
+                                                width: 100%;
+                                                height: 6px;
+                                                background-color: #d1d1d1;
+                                                @include border-radius(0);
+                                            }
+                                        }
+                                        &.slick-active {
+                                            button {
+                                                &::before {
+                                                    background-color: #fd1851;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// cart 
+@media screen and (max-width: #{$mobile}) {
+    #page_cart {
+        #cart {
+            #cart_box__body {
+                .total_box {
+                    .total_price {
+                        @include p-absolute(inherit, 0, inherit, inherit);
+                        width: 180px;
+                        color: #000;
+                        .text-primary {
+                            margin-right: 10%;
+                        }
+                    }
+                    .btn_group {
+                        width: 60%;
+                        margin: 0 auto;
+                        text-align: center;
+                        padding-top: 40px;
+                        p {
+                            @include float-r(49%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* product detail*/
+
+@media screen and (max-width: #{$mobile} - 213) {
+    #page_product_detail {
+        #item_detail {
+            #detail_wrap {
+                #goods_detail {}
+                #item_photo_area {
+                    #detail_image_box__slides {
+                        .fixed_item_wrap {
+                            img {}
+                        }
+                        .slick-dots {
+                            max-width: 100%;
+                            bottom: - 40px;
+                            text-align: center;
+                            li {
+                                width: 20px;
+                                button {
+                                    &::before {
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #item_detail_area {
+                    margin: 40px 0 0;
+                    #detail_description_box__name {}
+                    .item_code {}
+                    #relative_category_box {}
+                    #detail_cart_box__button_area {
+                        ul {
+                            li {
+                                button {}
+                                button.btn-info {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* register page*/
+
+@media screen and (max-width: #{$mobile - 340}) {
+    #page_entry {
+        #register_form {
+            #top_box__footer {
+                #top_box__button_menu {
+                    p {
+                        max-width: 200px;
+                        @media screen and (max-width: #{$mobile - 510}) {
+                            display: block;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* login page */
+
+@media screen and (max-width: #{$mobile}) {
+    #page_mypage_login {
+        .container-fluid {
+            padding: 0;
+            &.inner {
+                padding: 0;
+            }
+            #main {
+                #login_mypage {
+                    #login_box {
+                        #mypage_login_wrap {
+                            #mypage_login_box {
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* page forgot*/
+
+@media screen and (max-width: #{$mobile}) {
+    #page_forgot {
+        .container-fluid {
+            &.inner {
+
+            }
+            #contents {
+                #main {
+                    #top_box {
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

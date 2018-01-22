@@ -1,0 +1,90 @@
+/* footer */
+
+#footer {
+    padding: 0;
+    margin: 0;
+    .inner {
+        background: #f2f2f2;
+        .footer_part1 {
+            padding: 52px 0 35px;
+            .footer_logo_area {
+                margin: 0;
+                .logo {
+                    @include text(center, uppercase, none);
+                    font-weight: bold;
+                }
+            }
+            .footer_contents {
+                .footer_link_lists {
+                    margin: 30px auto 0;
+                    .list {
+                        margin: 0 20px;
+                        a{
+                            &:hover {
+                                color: #e32157;
+                            }
+                        }
+                    }
+                }
+                .sns_lists {
+                    margin-top: 38px;
+                    .list {
+                        margin: 0 5px;
+                        .icon { 
+                            .on {
+                                display: none;
+                            } 
+                             &:hover {
+                                img {
+                                    display: none;
+                                }
+                                img.on {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer_part2 {
+            background: #fff;
+            padding: 20px 0;
+            .copy_and_privacy {
+                max-width: 1040px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                .copyright {
+                    width: 50%;
+                    margin: 0;
+                    text-align: left;
+                    color: #686868;
+                    font-size: 13px;
+                }
+                .privacy {
+                    width: 50%;
+                    text-align: center;
+                    li {
+                        margin: 0;
+                        &:first-child a::before {
+                            display: none;
+                        }
+                        a {
+                            font-size: 13px;
+                            color: #5a5a5a;
+                            &::before {
+                                content: '|';
+                                display: inline-block;
+                                margin: 0 10px;
+                            }
+                            &:hover {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+        /* fixed style css eccube in eccube solution*/
+
+        @media only screen and (min-width: 768px) {
+            .page-heading {
+                margin: 41px 103px 10px;
+                font-size: 16px;
+                font-size: 1.6rem;
+                font-weight: bold;
+                border-bottom: 1px dotted #ccc;
+                border-top: 1px solid #ccc;
+                padding: 8px;
+            }
+            .intro {
+                margin: 0 550px;
+                padding-top: 0.5em;
+                padding-bottom: 28px;
+            }
+        }
+        /* break point*/
+
+        $mobile: 980px;
+        $mobile_xs: 640px;
+        .slick-slider {
+            margin: 0;
+        }
+        /* hide and show mobile to pc*/
+
+        @media screen and (min-width: #{$mobile - 1}) {
+            .mobile_view {
+                display: none;
+            }
+            #customer_review .wrap .add_list_btn {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: #{$mobile + 120}) {
+            .container-fluid.inner {
+                .container-fluid {
+                    padding: 0 30px;
+                }
+            }
+            #btn_page_top {
+                display: none;
+            }
+        }
+        @media screen and (max-width: #{$mobile}) {
+            .container-fluid.inner {
+                .container-fluid {
+                    padding: 0 15px;
+                }
+            }
+            .desktop_view {
+                display: none;
+            }
+            #btn_page_top {
+                display: none;
+            }
+        }
+
+        @import 'mixins.scss';
+        @import './assets/responssive/navigation_respon.scss';
+        @import './assets/responssive/main_banner_respon.scss';
+        @import './assets/responssive/product_slider_respon.scss';
+        @import './assets/responssive/curtain_respon.scss';
+        @import './assets/responssive/review_respon.scss';
+        @import './assets/responssive/visitor_respon.scss';
+        @import './assets/responssive/banner_bottom_respon.scss';
+        @import './assets/responssive/footer_respon.scss';
+        @import './assets/responssive/sub_respon.scss';

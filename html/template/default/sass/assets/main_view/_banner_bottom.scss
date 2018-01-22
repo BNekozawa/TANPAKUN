@@ -1,0 +1,42 @@
+#event_banner {
+    width: 100%;
+    .banner_wrap {
+        min-height: 350px;
+        background: #909293 url(../../default/img/main/main_bottom_ban.jpg) no-repeat;
+        background-attachment: fixed;
+        background-size: 110%;
+        background-position: 0 60%;
+        background-blend-mode: multiply;
+        position: relative;
+        .banner_text {
+            @include p-absolute(50%, inherit, inherit, 50%);
+            transform: translate(-50%, -50%);
+            color: #fff;
+            @include text(center, inherit, none);
+            span {
+                font-size: 15px;
+            }
+            p {
+                font-size: 32px;
+                .line-break{
+                    font-size: inherit;
+                    display: inline-block
+                }
+            }
+            a {
+                display: inline-block;
+                width: 174px;
+                height: 47px;
+                color: #000;
+                font-size: 15px;
+                background: #fff;
+                line-height: 45px;
+                @include border-radius(25px);
+                &:hover {
+                    background: #e32157;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

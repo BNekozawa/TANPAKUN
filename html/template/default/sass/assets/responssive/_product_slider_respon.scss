@@ -1,0 +1,178 @@
+
+@media screen and (max-width: #{$mobile}) {
+    #m_product_slider {
+        .wrap_product_lineup {
+            #lineup {
+                .lineup_slider {
+                    position: relative;
+                    .item {
+                        .wrap_img {
+                            margin: 30px 0;
+                            img {
+                                width: 60%;
+                                margin: 0 auto;
+                            }
+                        }
+                        .wrap_text {
+                            padding: 0 15% 50px;
+                            .product_name {
+                                padding-bottom: 15px;
+                                display: block;
+                                font-weight: 900;
+                                font-size: 30px;
+                                letter-spacing: 0;
+                                color: #5fadc3;
+                            }
+                            .desc {
+                                display: block;
+                                padding-bottom: 25px;
+                            }
+                            .type {
+                                padding-bottom: 19px;
+                                .taste {
+                                    @include float-l(100%);
+                                    text-align: left;
+                                    font-size: 14px;
+                                    img {
+                                        display: inline-block;
+                                    }
+                                    &:nth-child(2) {
+                                        margin-top: 10px;
+                                    }
+                                }
+                                &::after {
+                                    @include clear();
+                                }
+                            }
+                            .link_shop {
+                                display: inline-block;
+                                width: 150px;
+                                height: 50px;
+                                background: #000;
+                                @include border-radius(50px);
+                                color: #fff;
+                                @include text(center, inherit, none);
+                                line-height: 50px;
+                            }
+                        }
+                    }
+                    .slick-prev {
+                        background: url(../../default/img/sub/arrow_left.png) no-repeat;
+                        @include p-absolute(35%, inherit, inherit, 0);
+                        text-indent: -9999px;
+                        border: 0;
+                        width: 25px;
+                        height: 40px;
+                        left: 10px;
+                    }
+                    .slick-next {
+                        background: url(../../default/img/sub/arrow_right.png) no-repeat;
+                        @include p-absolute(35%, 0, inherit, inherit);
+                        text-indent: -9999px;
+                        border: 0;
+                        width: 25px;
+                        height: 40px;
+                        right: 10px;
+                    }
+                }
+            }
+            #info_slider {
+                .tab_btns {
+                    text-align: center;
+                    position: relative;
+                    min-height: 70px;
+                    width: 50%;
+                    margin: 0 auto;
+                    .tab_btn {
+                        position: absolute;
+                        display: inline-block;
+                        width: 170px;
+                        height: 50px;
+                        @include border-radius(40px);
+                        @include text(center, inherit, none);
+                        line-height: 40px;
+                        background: #fff;
+                        color: #000;
+                        border: 1px solid #000;
+                        line-height: 50px;
+                        &.btn_info1 {
+                            right: 40%;
+                        }
+                        &.btn_info2 {
+                            left: 40%;
+                        }
+                        &.is_active {
+                            z-index: 100;
+                            background: #000;
+                            color: #fff;
+                        }
+                    }
+                }
+                .wrap_info {
+                    position: relative;
+                    min-height: 400px;
+                    padding: 0 20px;
+                    .box_info {
+                        visibility: hidden;
+                        #info_slider_hamburger {
+                            margin-top: -260px;
+                            .content {
+                                h3 {
+                                    text-align: center;
+                                    font-size: 30px;
+                                    margin: 0;
+                                }
+                                p {
+                                    &:nth-child(2) {
+                                        text-align: center;
+                                        font-size: 85px;
+                                        margin: 22px 0 27px;
+                                        span {
+                                            font-size: 25px;
+                                            display: inline-block;
+                                            margin-left: -20px;
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        text-align: center;
+                                        font-size: 18px;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                        #info_slider_sausage {
+                            .content {
+                                h3 {
+                                    text-align: center;
+                                    font-size: 30px;
+                                    margin: 0;
+                                }
+                                p {
+                                    &:nth-child(2) {
+                                        text-align: center;
+                                        font-size: 85px;
+                                        margin: 22px 0 27px;
+                                        span {
+                                            font-size: 25px;
+                                            display: inline-block;
+                                            margin-left: -20px;
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        text-align: center;
+                                        font-size: 18px;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &.is_active {
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

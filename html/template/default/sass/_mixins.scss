@@ -1,0 +1,93 @@
+@mixin border-radius($br) {
+    -webkit-border-radius: $br;
+    -moz-border-radius: $br;
+    -ms-border-radius: $br;
+    border-radius: $br;
+}
+
+@mixin transition($prop, $sec, $func) {
+    transition: $prop $sec $func;
+}
+
+@mixin border($px, $color) {
+    border: $px solid $color;
+}
+
+@mixin background($color, $url, $repeat, $position, $size) {
+    background: $color $url $repeat $position;
+    background-size: $size;
+}
+
+@mixin clear() {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@mixin font($fs, $fw, $color) {
+    font-size: $f-s;
+    font-weight: $f-w;
+    color: $color;
+}
+
+@mixin text($t-a, $t-t, $t-d) {
+    text-align: $t-a;
+    text-transform: $t-t;
+    text-decoration: $t-d;
+}
+
+@mixin config_container($m-width) {
+    width: 100%;
+    max-width: $m-width;
+    margin: 0 auto;
+}
+
+@mixin float-l($width) {
+    float: left;
+    width: $width;
+}
+
+@mixin float-r($width) {
+    float: right;
+    width: $width;
+}
+
+@mixin p-absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin p-relative($top, $right, $bottom, $left) {
+    position: relative;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin p-fixed($top, $right, $bottom, $left) {
+    position: fixed;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin flex() {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@mixin transition($type,$time,$action) {
+    transition: $type $time $action;
+    -webkit-transition: $type $time $action;
+    -moz-transition: $type $time $action;
+    -o-transition: $type $time $action;
+}

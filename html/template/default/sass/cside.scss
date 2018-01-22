@@ -1,0 +1,53 @@
+/* common */
+
+body {
+    background: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+* {
+    font-family: "Noto Sans", sans-serif;
+}
+
+$color: #e32157;
+#contents {
+    padding: 0;
+}
+
+.container-fluid.inner {
+    padding: 0;
+    max-width: 100%;
+}
+
+
+@import 'mixins.scss';
+@import 'header.scss';
+@import 'navigation.scss';
+@import 'main.scss';
+@import 'sub.scss';
+// @import 'footer.scss';
+@import 'footer_new.scss';
+#btn_page_top {
+    position: fixed;
+    bottom: 40px !important;
+    right: -40px;
+    z-index: 9996;
+    opacity: 0;
+    -webkit-transition: .3s all ease-in;
+    -o-transition: .3s all ease-in;
+    transition: .3s all ease-in;
+    background: 18px 13px #8c8c8c url(../../default/img/main/top_btn_arrow.png) no-repeat;
+    background-size: 14px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    line-height: 75px;
+    font-size: 13px;
+    width: 54px;
+    height: 54px;
+    &.on {
+        bottom: 0 !important;
+        right: 50px;
+        opacity: 1;
+    }
+}
