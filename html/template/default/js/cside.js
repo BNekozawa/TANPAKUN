@@ -1,5 +1,5 @@
 $(function () {
-    
+
     // mobile sticky header
     var cloned = $("#m-header-navigation .cloned");
     var lastScrollTop = 0;
@@ -22,7 +22,17 @@ $(function () {
         }
         lastScrollTop = st;
     });
-
+  
+    // gnb click effect     
+    
+    var locate = document.location.href;
+    var strLocate = locate.split("/");
+    var current = strLocate[strLocate.length-1];
+    console.log(current);
+    if(current = "list") {
+        console.log("shop page");
+    }
+    
 
     // side menu toggle
     $('#m-header-navigation .m_navigation .list_btn').on('click', function () {
@@ -169,20 +179,4 @@ $(function () {
         }, 500);
         return false;
     });
-
-    // display total price at product detail page
-    var val = $('.quantity_amount #quantity').attr('value');
-    var amount = Number(val);
-    var amount = amount + 1;
-
-    $('.quantity_control.plus').on('click',function(){
-        event.preventDefault();
-        console.log('plus products amount');
-        amount;
-    })
-    $('.quantity_control.minus').on('click',function(){
-        event.preventDefault();
-        console.log('minus products amount');
-        amount--;
-    })
 });

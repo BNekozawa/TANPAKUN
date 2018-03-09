@@ -70,10 +70,8 @@
                         .promote {
                             @include float-l(300px);
                             display: inline-block;
-                            margin: 0 0 0 15px;
-                            &.product1 {
-                                margin: 13px 0 0 15px;
-                            }
+                            margin: 0 0 0 15px;            
+                            margin: 13px 0 0 15px;
                         }
                         &::after {
                             @include clear();

@@ -275,11 +275,14 @@ $(function() {
                                 {{ form_errors(form.shippings[idx].delivery) }}
                             </div>
 
-                            <div id="shopping_confirm_box__shipping_delivery_date_time--{{ idx }}" class="form-inline form-group">
+                            <!--<div id="shopping_confirm_box__shipping_delivery_date_time--{{ idx }}" class="form-inline form-group">
                                 <label>お届け日</label>
                                 {{ form_widget(form.shippings[idx].shippingDeliveryDate) }}<br class="sp">
                                 <label>お届け時間</label>
                                 {{ form_widget(form.shippings[idx].deliveryTime) }}
+                            </div>-->
+                            <div id="shopping_confirm_box__shipping_delivery_date_time--{{ idx }}" class="form-inline form-group">
+                                <label style="color:#ffbf00;">※お届け日時の指定は、承っておりません</label>
                             </div>
                             {% if is_granted('ROLE_USER') %}
                             <p id="shopping_confirm_box__edit_button--{{ idx }}" class="btn_edit"><a href="{{ url('shopping_shipping_change', {'id': shipping.id}) }}" class="btn btn-default btn-sm btn-shipping">変更</a></p>
@@ -319,8 +322,12 @@ $(function() {
 {% endif %}
                     <h2 class="heading02">お問い合わせ欄</h2>
                     <div id="contact_message" class="column">
-                        {{ form_widget(form.message, {'attr': {'placeholder': 'お問い合わせ事項がございましたら、こちらにご入力ください。(3000文字まで)', 'rows': '6'}}) }}
-                        {{ form_errors(form.message) }}
+                        商品、配送に関する問い合わせがございましたら、カスタマーサポートセンターまでご連絡ください。<br/><br/>
+                        カスタマーサポートセンター:06-6567-8790<br/>
+                        受付時間 10:00～18:00<br/>
+                        土・日・祝日を除く
+                        <!-- {{ form_widget(form.message, {'attr': {'placeholder': 'お問い合わせ事項がございましたら、こちらにご入力ください。(3000文字まで)', 'rows': '6'}}) }}
+                        {{ form_errors(form.message) }} -->
                     </div>
                     <div class="extra-form column">
                         {% for f in form.getIterator %}

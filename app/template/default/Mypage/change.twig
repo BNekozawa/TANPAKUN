@@ -33,6 +33,19 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
             AjaxZip3.zip2addr('entry[zip][zip01]', 'entry[zip][zip02]', 'entry[address][pref]', 'entry[address][addr01]');
         });
     });
+    function showCarrierDomain() {
+        $('#carrier_domain_modal').remove();
+        $.get("{{ app.config.front_urlpath }}/static/carrier_domain.html"
+            ,function(data,status) {
+                $('body').append(data);
+                $('.blackcover, #carrier_domain_wrap').fadeIn(10);
+            }
+        );
+    }
+    $(document).on("click", "#carrier_domain_wrap .btn-close", function(){
+        $('.blackcover, #carrier_domain_wrap').fadeOut(10);
+        return false;
+    });
 </script>
 {% endblock javascript %}
 
@@ -107,6 +120,44 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
                                 {{ form_errors(emailField) }}
                             </div>
                             {% endfor %}
+                            <p class="desc_title">!&nbsp;注意事項&nbsp;!</p>
+                            <p class="desc">
+                                <a href="javascript:showCarrierDomain()">各携帯キャリアメール</a>を登録する場合、<br>
+                                「support@tanpakun.co.jp」からのメールを受信できるように<br>
+                                設定をお願いいたします。<br>
+                                各携帯キャリアの「ドメイン指定受信設定」による受信拒否のため、<br>
+                                注文確認メール等、TANPAKUNサイトから発信するメールが<br>
+                                届かない場合があります。<br><br>
+                                ＜ドメイン指定受信設定・解除方法＞<br>
+                                &nbsp;・<a target="_blank" href="https://www.nttdocomo.co.jp/info/spam_mail/domain/index.html">NTT&nbsp;Docomoの場合</a><br>
+                                &nbsp;・<a target="_blank" href="https://www.au.com/support/service/mobile/trouble/mail/email/filter/detail/domain/#mobilephone">au&nbsp;by&nbsp;KDDIの場合</a><br>
+                                &nbsp;・<a target="_blank" href="http://faq.mb.softbank.jp/detail.aspx?cid=9472&id=e49564541756e2b653962476e674a717455635431444f6d67792b4e314c42385858537047676b64425a50453d">SoftBankの場合</a>
+                            </p>
+                            <p class="m_desc">
+                                <a href="javascript:showCarrierDomain()">各携帯キャリアメール</a>を登録する場合、<br>
+                                「support@tanpakun.co.jp」からのメールを受信できるように<br>
+                                設定をお願いいたします。<br>
+                                各携帯キャリアの「ドメイン指定受信設定」による受信拒否のため、<br>
+                                注文確認メール等、TANPAKUNサイトから発信するメールが<br>
+                                届かない場合があります。<br><br>
+                                ＜ドメイン指定受信設定・解除方法＞<br>
+                                &nbsp;・<a target="_blank" href="https://www.nttdocomo.co.jp/info/spam_mail/domain/index.html">NTT&nbsp;Docomoの場合</a><br>
+                                &nbsp;・<a target="_blank" href="https://www.au.com/support/service/mobile/trouble/mail/email/filter/detail/domain/#mobilephone">au&nbsp;by&nbsp;KDDIの場合</a><br>
+                                &nbsp;・<a target="_blank" href="http://faq.mb.softbank.jp/detail.aspx?cid=9472&id=e49564541756e2b653962476e674a717455635431444f6d67792b4e314c42385858537047676b64425a50453d">SoftBankの場合</a>
+                            </p>
+                            <p class="m_desc_xs">
+                                <a href="javascript:showCarrierDomain()">各携帯キャリアメール</a>を登録する場合、<br>
+                                「support@tanpakun.co.jp」からのメールを<br>
+                                受信できるように設定をお願いいたします。<br>
+                                各携帯キャリアの「ドメイン指定受信設定」<br>
+                                による受信拒否のため、注文確認メール等、<br>
+                                TANPAKUNサイトから発信するメールが<br>
+                                届かない場合があります。<br><br>
+                                ＜ドメイン指定受信設定・解除方法＞<br>
+                                &nbsp;・<a target="_blank" href="https://www.nttdocomo.co.jp/info/spam_mail/domain/index.html">NTT&nbsp;Docomoの場合</a><br>
+                                &nbsp;・<a target="_blank" href="https://www.au.com/support/service/mobile/trouble/mail/email/filter/detail/domain/#mobilephone">au&nbsp;by&nbsp;KDDIの場合</a><br>
+                                &nbsp;・<a target="_blank" href="http://faq.mb.softbank.jp/detail.aspx?cid=9472&id=e49564541756e2b653962476e674a717455635431444f6d67792b4e314c42385858537047676b64425a50453d">SoftBankの場合</a>
+                            </p>
                         </dd>
                     </dl>
                     <dl id="detail_box__password">

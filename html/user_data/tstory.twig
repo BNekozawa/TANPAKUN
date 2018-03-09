@@ -1,0 +1,139 @@
+{% extends 'default_frame.twig' %} 
+{% block stylesheet %} 
+
+{% endblock %} 
+{% block main %}
+<div id="page_t_story">
+  <div class="wrap">
+    <h2>t.story</h2>
+    <p>see more tanpakun story~!</p>
+    <div id="container" class="grid fb_contents" style="z-index:10;">
+    </div>
+  </div>
+</div>
+{% endblock %} {% block javascript%}
+<!-- <script src="{{ app.config.front_urlpath }}/js/waterfall-light.js"></script> --> 
+<script src="{{ app.config.front_urlpath }}/js/responsive_waterfall.js"></script>  
+<script>
+  //각 자식 내부 엘레먼트 생성 후 카드컨테이너에 붙이기
+  //카드 컨테이너 class는 grid-item
+  var getCardTemplate = function (target, elm) {
+    if (elm.full_picture) {
+      $('<img />', {
+        class: 'fb-img',
+        src: elm.full_picture
+      }).appendTo(target)
+    }
+
+    if (elm.message) {
+      $('<p />', {
+        class: 'fb-message',
+        text: elm.message,
+      }).appendTo(target)
+    }
+
+    if (elm.created_time) {
+      //for use only ymd
+      var allDate = elm.created_time;
+      var firstSplit = allDate.split('-');
+      var secondSplit = firstSplit[2].split('T');
+      var year = firstSplit[0];
+      var month = firstSplit[1];
+      var day = secondSplit[0];
+      $('<span />', {
+        class: 'date',
+        text: [year, month, day],
+      }).appendTo(target)
+    }
+
+    if (elm.link) {
+      // set link url as a blank page
+      $('<a />', {
+        class: 'fb-link',
+        href: elm.link,
+        target: '_blank'
+      }).appendTo(target)
+    }
+  }
+
+  //document onload
+  $(function () {
+    var appendToContainer = function ($entry) {
+      $('#container').append($entry)
+    }
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '166254097308842',
+        xfbml: true,
+        version: 'v2.11'
+      });
+      FB.AppEvents.logPageView();
+      //FB API불러오기
+      FB.api('/tanpakuncrew/posts?fields=full_picture,message,created_time,link', {
+        access_token: 'EAACXNQxpnKoBACNxQPEOEbIz4ZAvUOqGULZCIRYpJbxqPkVFOpKZBhQGeA9ZCdEUoxY5jRguYa5ig1RVb3ZBvvq7wCZCHVTESfTQzbAVhI9ooWSZCNUHELuNgsqeIs71fAuTLBQexcFbiZAalJQcMNMkM21YQQyQKvZBWtpHDdAq9xAZDZD'
+      }, function (response) {
+        //FB API불러오기 성공 후 실행하기
+        console.log(response);
+        var arrData = response.data;
+        var target = $('#container')
+        $.each(arrData, function (idx, elm) {
+          var $entry = $('<div />', {
+            class: 'grid-item',
+          });
+          getCardTemplate($entry, elm);
+          //레이아웃에 추가하기
+          appendToContainer($entry);
+        });
+        //use waterfall js plugin
+        //$('#container').waterfall({
+        //  top: 22,
+        //  w: 1008,
+        //  col: 4,
+        //  gap: 22,
+        //  gridWidth: [0, 300, 600, 800, 1200],
+        //  
+        //});
+        
+        // use another waterfall js plugin
+        var waterfall = new Waterfall({
+          containerSelector: '#container',
+          boxSelector: '.grid-item',
+          minBoxWidth: 228
+        });
+
+
+        // text truncate 
+        var showChar = Math.ceil((Math.random() * 100) + 50);
+        var ellipsestext = "...";
+        $('.fb-message').each(function () {
+          var content = $(this).html();
+          if (content.length > showChar) {
+            var c = content.substr(0, showChar);
+            var html = '<div class="truncate-text" style="display:block">' + c + '<span class="moreellipses">' + '&nbsp&nbsp;' + ellipsestext;
+            
+              $(this).html(html);
+          }
+
+        });
+      })
+    };
+    //컨테이너에 자식 붙이기
+
+
+    //script태그 생성 후 FB API다운
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    var me = this;
+  })
+</script>
+{% endblock %}

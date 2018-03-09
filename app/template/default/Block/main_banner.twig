@@ -28,24 +28,6 @@
 <div class="main_banner desktop_view">
     <div id="slider_container">
             <ul class="slider">
-                <li class="slide_item item1">
-                        <img class="so_1" src="../template/default/img/main/so_1.jpg" alt="">
-                        <img class="so_2" src="../template/default/img/main/so_2.jpg" alt="">
-                        <img class="so_3" src="../template/default/img/main/so_3.jpg" alt="">
-                        <img class="so_4" src="../template/default/img/main/so_4.jpeg" alt="">
-                        <!-- <img class="so_5" src="../template/default/img/main/so_5.jpg" alt=""> -->
-                        <!-- <img class="so_6" src="../template/default/img/main/so_6.jpg" alt=""> -->
-                    <div class="link_box">
-                        <div class="wrap">
-                            <span class="link">
-                                <a href="{{ url('product_list') }}?category_id=1">購入</a>
-                            </span>
-                            <p class="promote product1">
-                                 圧倒的な食べやすさ！<br>国産鶏100%使用 鶏胸肉ソーセージ
-                            </p>
-                        </div>
-                    </div>
-                </li>
                 <li class="slide_item item2">
                     <img class="ham_1" src="../template/default/img/main/ham_1.jpg" alt="">
                     <img class="ham_2" src="../template/default/img/main/ham_2.jpg" alt="">
@@ -56,10 +38,28 @@
                     <div class="link_box">
                         <div class="wrap">
                             <span class="link">
-                                <a href="javascript:alert('準備中')">準備中</a>
+                                <a href="{{ url('product_list') }}?category_id=2">購入</a>
                             </span>
                             <p class="promote product2">
-                                圧倒的な食べやすさ！<br> 国産鶏胸肉100%ハンバーグ<br>2018年1月29日発売予定！
+                                圧倒的な食べやすさ！<br> 国産鶏胸肉100%ハンバーグ
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="slide_item item1">
+                    <img class="so_1" src="../template/default/img/main/so_1.jpg" alt="">
+                    <img class="so_2" src="../template/default/img/main/so_2.jpg" alt="">
+                    <img class="so_3" src="../template/default/img/main/so_3.jpg" alt="">
+                    <img class="so_4" src="../template/default/img/main/so_4.jpeg" alt="">
+                    <!-- <img class="so_5" src="../template/default/img/main/so_5.jpg" alt=""> -->
+                    <!-- <img class="so_6" src="../template/default/img/main/so_6.jpg" alt=""> -->
+                    <div class="link_box">
+                        <div class="wrap">
+                            <span class="link">
+                                <a href="{{ url('product_list') }}?category_id=1">購入</a>
+                            </span>
+                            <p class="promote product1">
+                                圧倒的な食べやすさ！<br>国産鶏100%使用 鶏胸肉ソーセージ
                             </p>
                         </div>
                     </div>
@@ -72,30 +72,30 @@
 <div class="m_main_banner mobile_view">
     <div id="m_slider_container">
         <ul class="m_slider">
-            <li class="slide_item item1">            
+            <li class="slide_item item2">
+                <a href="{{ url('product_list') }}?category_id=2">
+                    <img src="../template/default/img/main/m_ham.jpg" alt="">
+                </a>
+            </li>  
+            <li class="slide_item item1">
                 <a href="{{ url('product_list') }}?category_id=1">
                     <img src="../template/default/img/main/m_so.jpeg" alt="">
                 </a>
-            </li>  
-            <li class="slide_item item2">
-                <a href="javascript:alert('準備中')">
-                    <img src="../template/default/img/main/m_ham.jpeg" alt="">
-                </a>
-            </li>  
+            </li>
         </ul>
     </div>
 </div>
 <div class="m_main_banner_xs mobile_view_xs">
     <div id="m_slider_container_xs">
         <ul class="m_slider_xs">
+            <li class="slide_item item2">
+                <a href="{{ url('product_list') }}?category_id=2">
+                    <img src="../template/default/img/main/m_ham_s.jpg" alt="">
+                </a>
+            </li>  
             <li class="slide_item item1">
                 <a href="{{ url('product_list') }}?category_id=1">
                     <img src="../template/default/img/main/m_so_s.jpeg" alt="">
-                </a>
-            </li>  
-            <li class="slide_item item2">
-                <a href="javascript:alert('準備中')">
-                    <img src="../template/default/img/main/m_ham_s.jpeg" alt="">
                 </a>
             </li>  
         </ul>

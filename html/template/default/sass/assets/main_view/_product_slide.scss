@@ -73,12 +73,6 @@
                             &:hover {
                                 background-color: #e32157;
                             }
-                            &.ham {
-                                background-color: #a8a8a8;
-                                &:hover {
-                                    background-color: #a8a8a8;
-                                }
-                            }
                         }
                         .type {
                             min-width: 270%;
@@ -133,8 +127,8 @@
             float: left;
             img {
                 position: absolute;
-                top: 20%;
-                left: 12%;
+                top: 18%;
+                left: 8%;
                 transform: matrix(0.4924, 0.08682, -0.08682, 0.4924, 200, -800);
                 opacity: 1;
                 backface-visibility: hidden;
