@@ -79,8 +79,11 @@ $(function() {
                                 {% if BaseInfo.zip01 is defined %}
                                 <dl id="help_about_box__zip">
                                     <dt>所在地</dt>
-                                    <dd>〒{{ BaseInfo.zip01 }}-{{ BaseInfo.zip02 }}<br />
+                                    <!--<dd>〒{{ BaseInfo.zip01 }}-{{ BaseInfo.zip02 }}<br />
                                         {{ BaseInfo.pref }}{{ BaseInfo.addr01 }}{{ BaseInfo.addr02 }}
+                                    </dd>-->
+                                    <dd>〒135-0063<br />
+                                        東京都江東区有明三丁目7番26号 有明フロンティアビルB棟9階
                                     </dd>
                                 </dl>
                                 {% endif %}
@@ -88,7 +91,8 @@ $(function() {
                                 {% if BaseInfo.tel01 is defined %}
                                     <dl id="help_about_box__tel">
                                         <dt>電話番号</dt>
-                                        <dd>{{ BaseInfo.tel01 }}-{{ BaseInfo.tel02 }}-{{ BaseInfo.tel03 }}</dd>
+                                        <!--<dd>{{ BaseInfo.tel01 }}-{{ BaseInfo.tel02 }}-{{ BaseInfo.tel03 }}</dd>-->
+                                        <dd>03-5530-8494</dd>
                                     </dl>
                                 {% endif %}
 

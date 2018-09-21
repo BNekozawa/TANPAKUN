@@ -1,0 +1,31 @@
+{#
+* Plugin Name : ShippingMailHandler
+#}
+{{ param.customer_name }} 様
+
+{{ header }}
+※メール下部に＜配送に関する重要事項＞がありますので、必ずお読みください。
+
+以下、商品の発送が完了しましたので、ご連絡いたします。
+・注文番号: {{ param.order_id }}
+・注文内容:
+{%  for ShipmentItem in param.ShipmentItems %}
+      {{ ShipmentItem.product_name }}{{ ShipmentItem.product_size }} ×{{ ShipmentItem.quantity|number_format }}
+{% endfor %}
+・追跡用配送番号(ヤマト運輸): {{ param.slip_number|slice(0,4) }}-{{ param.slip_number|slice(4,4) }}-{{ param.slip_number|slice(8,4) }}
+
+＜配送に関する重要事項＞
+・運送会社の保存期間は、初回配達日から4日となります。
+・お客様都合による長期不在で、運送会社の保存期間が過ぎた場合、再配達は可能ですが、送料は全額お客様負担となります。
+
+※注文詳細のご確認は、TANPAKUNホームページから以下の手順で確認可能です。
+「ログイン」→「マイページ」→「ご注文履歴」
+
+商品、配送に関する問い合わせがございましたら、
+以下カスタマーサポートセンターまでご連絡ください。
+06-6567-8790
+
+以上、よろしくお願いします。
+
+〜日本初の健康応援ブランド〜
+{{ footer }}

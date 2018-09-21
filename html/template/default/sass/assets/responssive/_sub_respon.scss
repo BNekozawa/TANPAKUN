@@ -248,7 +248,19 @@
         }
     }
 }
-
+@media screen and (max-width: #{$mobile} - 213) {
+    #page_cart {
+        #cart {
+            #cart_box__body {
+                #cart_item_list__item {
+                    #cart_item_list__quantity::before {
+                        content: "注文kg数:";
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* product list */
 

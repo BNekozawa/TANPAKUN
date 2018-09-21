@@ -28,24 +28,6 @@
 <div class="main_banner desktop_view">
     <div id="slider_container">
             <ul class="slider">
-                <li class="slide_item item2">
-                    <img class="ham_1" src="../template/default/img/main/ham_1.jpg" alt="">
-                    <img class="ham_2" src="../template/default/img/main/ham_2.jpg" alt="">
-                    <img class="ham_3" src="../template/default/img/main/ham_3.jpg" alt="">
-                    <img class="ham_4" src="../template/default/img/main/ham_4.jpeg" alt="">
-                    <!-- <img class="ham_5" src="../template/default/img/main/ham_5.jpg" alt=""> -->
-                    <!-- <img class="ham_6" src="../template/default/img/main/ham_6.jpg" alt=""> -->
-                    <div class="link_box">
-                        <div class="wrap">
-                            <span class="link">
-                                <a href="{{ url('product_list') }}?category_id=2">購入</a>
-                            </span>
-                            <p class="promote product2">
-                                圧倒的な食べやすさ！<br> 国産鶏胸肉100%ハンバーグ
-                            </p>
-                        </div>
-                    </div>
-                </li>
                 <li class="slide_item item1">
                     <img class="so_1" src="../template/default/img/main/so_1.jpg" alt="">
                     <img class="so_2" src="../template/default/img/main/so_2.jpg" alt="">
@@ -64,6 +46,24 @@
                         </div>
                     </div>
                 </li>
+                <li class="slide_item item2">
+                    <img class="ham_1" src="../template/default/img/main/ham_1.jpg" alt="">
+                    <img class="ham_2" src="../template/default/img/main/ham_2.jpg" alt="">
+                    <img class="ham_3" src="../template/default/img/main/ham_3.jpg" alt="">
+                    <img class="ham_4" src="../template/default/img/main/ham_4.jpeg" alt="">
+                    <!-- <img class="ham_5" src="../template/default/img/main/ham_5.jpg" alt=""> -->
+                    <!-- <img class="ham_6" src="../template/default/img/main/ham_6.jpg" alt=""> -->
+                    <div class="link_box">
+                        <div class="wrap">
+                            <span class="link">
+                                <a href="{{ url('product_list') }}?category_id=2">購入</a>
+                            </span>
+                            <p class="promote product2">
+                                圧倒的な食べやすさ！<br> 国産鶏胸肉100%ハンバーグ
+                            </p>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -71,15 +71,15 @@
 <!-- mobile -->
 <div class="m_main_banner mobile_view">
     <div id="m_slider_container">
-        <ul class="m_slider">
-            <li class="slide_item item2">
-                <a href="{{ url('product_list') }}?category_id=2">
-                    <img src="../template/default/img/main/m_ham.jpg" alt="">
-                </a>
-            </li>  
+        <ul class="m_slider">  
             <li class="slide_item item1">
                 <a href="{{ url('product_list') }}?category_id=1">
                     <img src="../template/default/img/main/m_so.jpeg" alt="">
+                </a>
+            </li>
+            <li class="slide_item item2">
+                <a href="{{ url('product_list') }}?category_id=2">
+                    <img src="../template/default/img/main/m_ham.jpg" alt="">
                 </a>
             </li>
         </ul>
@@ -88,16 +88,16 @@
 <div class="m_main_banner_xs mobile_view_xs">
     <div id="m_slider_container_xs">
         <ul class="m_slider_xs">
-            <li class="slide_item item2">
-                <a href="{{ url('product_list') }}?category_id=2">
-                    <img src="../template/default/img/main/m_ham_s.jpg" alt="">
-                </a>
-            </li>  
             <li class="slide_item item1">
                 <a href="{{ url('product_list') }}?category_id=1">
                     <img src="../template/default/img/main/m_so_s.jpeg" alt="">
                 </a>
-            </li>  
+            </li>
+            <li class="slide_item item2">
+                <a href="{{ url('product_list') }}?category_id=2">
+                    <img src="../template/default/img/main/m_ham_s.jpg" alt="">
+                </a>
+            </li>
         </ul>
     </div>
 </div>

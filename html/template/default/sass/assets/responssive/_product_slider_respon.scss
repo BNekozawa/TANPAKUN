@@ -36,7 +36,7 @@
                                     img {
                                         display: inline-block;
                                     }
-                                    &:nth-child(2) {
+                                    &:nth-child(n+1) {
                                         margin-top: 10px;
                                     }
                                 }
