@@ -29,6 +29,33 @@
     <div id="slider_container">
             <ul class="slider">
                 <li class="slide_item item1">
+                    <img class="rice_1" src="../template/default/img/main/s_garlic_pc.jpg" alt="">
+                    <div class="link_box">
+                        <div class="wrap">
+                            <span class="link">
+                                <a href="{{ url('product_list') }}?category_id=1">購入</a>
+                            </span>
+                            <p class="promote product1">
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="slide_item item2">
+                    <img class="rice_1" src="../template/default/img/main/rice_1.jpeg" alt="">
+                    <!-- <img class="so_5" src="../template/default/img/main/so_5.jpg" alt=""> -->
+                    <!-- <img class="so_6" src="../template/default/img/main/so_6.jpg" alt=""> -->
+                    <div class="link_box">
+                        <div class="wrap">
+                            <span class="link">
+                                <a href="{{ url('product_list') }}?category_id=6">購入</a>
+                            </span>
+                            <p class="promote product1">
+                                国産米/玄米の独自ブレンドで<br>こだわりの栄養バランスに仕上げました!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="slide_item item3">
                     <img class="so_1" src="../template/default/img/main/so_1.jpg" alt="">
                     <img class="so_2" src="../template/default/img/main/so_2.jpg" alt="">
                     <img class="so_3" src="../template/default/img/main/so_3.jpg" alt="">
@@ -46,7 +73,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="slide_item item2">
+                <li class="slide_item item4">
                     <img class="ham_1" src="../template/default/img/main/ham_1.jpg" alt="">
                     <img class="ham_2" src="../template/default/img/main/ham_2.jpg" alt="">
                     <img class="ham_3" src="../template/default/img/main/ham_3.jpg" alt="">
@@ -71,13 +98,23 @@
 <!-- mobile -->
 <div class="m_main_banner mobile_view">
     <div id="m_slider_container">
-        <ul class="m_slider">  
-            <li class="slide_item item1">
+        <ul class="m_slider">
+            <li class="slide_item item2">
+                <a href="{{ url('product_list') }}?category_id=1">
+                    <img src="../template/default/img/main/s_garlic_tab.jpg" alt="">
+                </a>
+            </li>
+            <li class="slide_item item2">
+                <a href="{{ url('product_list') }}?category_id=6">
+                    <img src="../template/default/img/main/m_rice.jpeg" alt="">
+                </a>
+            </li>
+            <li class="slide_item item3">
                 <a href="{{ url('product_list') }}?category_id=1">
                     <img src="../template/default/img/main/m_so.jpeg" alt="">
                 </a>
             </li>
-            <li class="slide_item item2">
+            <li class="slide_item item4">
                 <a href="{{ url('product_list') }}?category_id=2">
                     <img src="../template/default/img/main/m_ham.jpg" alt="">
                 </a>
@@ -90,10 +127,20 @@
         <ul class="m_slider_xs">
             <li class="slide_item item1">
                 <a href="{{ url('product_list') }}?category_id=1">
-                    <img src="../template/default/img/main/m_so_s.jpeg" alt="">
+                    <img src="../template/default/img/main/s_garlic_mo.jpg" alt="">
                 </a>
             </li>
             <li class="slide_item item2">
+                <a href="{{ url('product_list') }}?category_id=6">
+                    <img src="../template/default/img/main/m_rice_s.png" alt="">
+                </a>
+            </li>
+            <li class="slide_item item3">
+                <a href="{{ url('product_list') }}?category_id=1">
+                    <img src="../template/default/img/main/m_so_s.jpeg" alt="">
+                </a>
+            </li>
+            <li class="slide_item item4">
                 <a href="{{ url('product_list') }}?category_id=2">
                     <img src="../template/default/img/main/m_ham_s.jpg" alt="">
                 </a>
